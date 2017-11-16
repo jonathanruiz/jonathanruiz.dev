@@ -1,0 +1,44 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "left left right"
+    "footer footer footer";
+  grid-gap: 10px 10px; 
+}
+
+.box {
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+header, nav, .right {
+  background-color: teal;
+}
+
+header {
+  grid-area: header;
+  background-color: teal;
+}
+
+nav {
+  grid-area: nav;
+  background-color: teal;
+}
+
+footer {
+  grid-area: footer;
+  background-color: black;
+}
+
+.left {
+  grid-area: left;
+  background-color: lightcoral;
+}
+
+.right {
+  grid-area: right;
+  background-color: teal;
+}

@@ -5,7 +5,10 @@
     "nav nav nav"
     "left left right"
     "footer footer footer";
-  grid-gap: 10px 10px; 
+  grid-template-rows: 200px 100px 500px 200px;
+  grid-gap: 10px 10px;
+  margin: auto;
+  position: relative;
 }
 
 .box {
@@ -14,8 +17,9 @@
   padding: 10px 10px;
 }
 
-header, nav, .right {
-  background-color: teal;
+h1, h2, h3 {
+  font-family: monospace;
+  text-align: center;
 }
 
 header {
@@ -25,7 +29,7 @@ header {
 
 nav {
   grid-area: nav;
-  background-color: teal;
+  background-color: gray;
 }
 
 footer {

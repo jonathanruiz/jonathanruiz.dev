@@ -2,12 +2,11 @@
   .container {
     display: grid;
     grid-template-areas:
-      "h r r r"
-      "i r r r"
-      "i r r r"
-      "i r r r"
-      "f r r r"; 
-    grid-template-columns: repeat(2, fr);
+      "h r"
+      "i r"
+      "i r"
+      "f r"; 
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 3fr 1fr;
   }
 }

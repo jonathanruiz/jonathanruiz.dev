@@ -2,23 +2,23 @@
   .container {
     display: grid;
     grid-template-areas:
-      "h h h r r r r r r r r r"
-      "i i i r r r r r r r r r"
-      "i i i r r r r r r r r r"
-      "f f f r r r r r r r r r"
-      "f f f r r r r r r r r r"; 
-    grid-template-columns: repeat(12, fr);
-    grid-template-rows: auto 1fr 3fr 2fr auto;
-    /* grid-gap: 10px 10px; */
-    margin: auto;
-    position: relative;
+      "h r r r"
+      "i r r r"
+      "i r r r"
+      "i r r r"
+      "f r r r"; 
+    grid-template-columns: repeat(2, fr);
+    grid-template-rows: 1fr 3fr 1fr;
   }
 }
 
 .box {
   color: #ffffff;
-  /* border-radius: 5px; */
   padding: 10px 10px;
+}
+
+body {
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -29,7 +29,6 @@ h1, h2, h3 {
 
 ul, li, p {
   font-family: 'Roboto';
-  
 }
 
 .header {

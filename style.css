@@ -1,3 +1,27 @@
+/* Resets */
+
+body {
+  margin: 0;
+}
+
+/* Typography */
+
+h1, h2, h3 {
+  font-family: 'Roboto';
+  text-align: center;
+  font-variant-caps: all-petite-caps;
+}
+
+ul, li, p {
+  font-family: 'Roboto';
+}
+
+.box {
+  color: #ffffff;
+  padding: 10px 10px;
+}
+
+/* CSS Grid */
 @media (min-width: 960px) {
   .container {
     display: grid;
@@ -9,25 +33,6 @@
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 3fr 1fr;
   }
-}
-
-.box {
-  color: #ffffff;
-  padding: 10px 10px;
-}
-
-body {
-  margin: 0;
-}
-
-h1, h2, h3 {
-  font-family: 'Roboto';
-  text-align: center;
-  font-variant-caps: all-petite-caps;
-}
-
-ul, li, p {
-  font-family: 'Roboto';
 }
 
 .header {

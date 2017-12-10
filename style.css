@@ -1,5 +1,9 @@
 /* Resets */
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
 }
@@ -21,9 +25,16 @@ ul, li, p {
   padding: 10px 10px;
 }
 
+/* General Styles */
+
+ul {
+  list-style-type: none;
+}
+
 /* CSS Grid */
 @media (min-width: 960px) {
   .container {
+    height: 100%;
     display: grid;
     grid-template-areas:
       "h r"

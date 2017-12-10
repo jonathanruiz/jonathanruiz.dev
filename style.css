@@ -28,7 +28,6 @@ ul, li, p {
     grid-template-areas:
       "h r"
       "i r"
-      "i r"
       "f r"; 
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 3fr 1fr;

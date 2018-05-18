@@ -1,5 +1,14 @@
-/* Resets */
+/* CSS Variables */
+:root {
+  --black: #282e34;
+  --main-grey: #666666;
+  --second-grey: #92999f;
+  --main-white: #ffffff;
+  --second-white: #f4f4f4;
+  --blue: #0a9797;
+}
 
+/* Resets */
 html, body {
   height: 100%;
   margin: 0;
@@ -19,54 +28,67 @@ p {
   text-align: left;
 }
 
+h2 {
+  color: var(--blue);
+}
+
+.background-images {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .ptext {
   position: absolute;
   top: 40%;
   width: 100%;
 }
 
-.ptext .border {
-  background-color: #0a9797;
-  color: #ffffff;
+.border {
+  background-color: var(--blue);
+  color: var(--main-white);
   padding: 20px;
 }
 
 .content {
-  background-color: #f4f4f4;
-  color: #666666;
+  background-color: var(--second-white);
+  color: var(--main-grey);
   text-align: center;
   padding: 50px 50px;
 }
 
+.footer {
+  margin: 0;
+  background-color: var(--black);
+  color: var(--second-grey);
+  text-align: center;
+  padding: 50px 50px;
+}
 
-/* Header */
-.main-image {
-  position: relative;
-  opacity: 0.70;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.footer h2 {
+  color: var(--main-white);
+}
 
+/* Images */
+#main-image {
   background-image: url('../img/miami-ocean.jpg');
   min-height: 100%;
 }
 
-/* Introduction */
-.profile-pic {
-  width: 100%;
-}
-
-/* Image 2 */
-.secondary-image {
-  position: relative;
-  opacity: 0.70;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
+#second-image {
   background-image: url('../img/coding-laptop.jpg');
   min-height: 60%;
+}
+
+#third-image {
+  background-image: url('../img/laptop-phones.jpg');
+  min-height: 60%;
+}
+
+#profile-pic {
+  width: 100%;
 }
 
 /* Responsive Design */
@@ -81,7 +103,7 @@ p {
 }
 
 @media screen and (min-width: 350px) {
-  .profile-pic {
+  #profile-pic {
     width: 200px;
   }
 } 

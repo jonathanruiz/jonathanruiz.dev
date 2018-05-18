@@ -2,32 +2,73 @@
 
 html, body {
   height: 100%;
-}
-
-body {
   margin: 0;
+  font-family: 'Roboto';
 }
 
 /* Typography */
-
-h1, h2, h3 {
-  font-family: 'Roboto';
+.ptext {
+  font-size: 28px;
   text-align: center;
-  font-variant-caps: all-petite-caps;
-}
-
-ul, li, p {
-  font-family: 'Roboto';
-}
-
-.box {
-  color: #ffffff;
-  padding: 10px 10px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
 }
 
 /* General Styles */
-
-ul {
-  list-style-type: none;
+p {
+  text-align: left;
 }
 
+.ptext {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+.ptext .border {
+  background-color: rgb(10, 151, 151);
+  color: #fff;
+  padding: 20px;
+}
+
+.content {
+  background-color: #f4f4f4;
+  color: #666;
+  text-align: center;
+  padding: 50px 50px;
+}
+
+
+/* Header */
+.main_image {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image: url('../img/miami-ocean.jpg');
+  min-height: 100%;
+}
+
+/* Introduction */
+.profile-pic {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 400px) {
+  p {
+    font-size: 14px;
+  }
+
+  .ptext {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .profile-pic {
+    width: 200px;
+  }
+} 

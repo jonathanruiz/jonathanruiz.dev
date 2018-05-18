@@ -1,80 +1,109 @@
-/* Resets */
-
-html, body {
-  height: 100%;
+/* CSS Variables */
+:root {
+  --black: #282e34;
+  --main-grey: #666666;
+  --second-grey: #92999f;
+  --main-white: #ffffff;
+  --second-white: #f4f4f4;
+  --blue: #0a9797;
 }
 
-body {
+/* Resets */
+html, body {
+  height: 100%;
   margin: 0;
+  font-family: 'Roboto';
 }
 
 /* Typography */
-
-h1, h2, h3 {
-  font-family: 'Roboto';
+.ptext {
+  font-size: 28px;
   text-align: center;
-  font-variant-caps: all-petite-caps;
-}
-
-ul, li, p {
-  font-family: 'Roboto';
-}
-
-.box {
-  color: #ffffff;
-  padding: 10px 10px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
 }
 
 /* General Styles */
-
-ul {
-  list-style-type: none;
+p {
+  text-align: left;
 }
 
-/* CSS Grid */
-@media screen and (min-width: 550px) {
-  .container {
-    height: 100%;
-    display: grid;
-    grid-template-areas:
-    "h"
-    "r"
-    "i"
-    "f"
-  }
+h2 {
+  color: var(--blue);
 }
 
-@media screen and (min-width: 960px) {
-  .container {
-    height: 100%;
-    display: grid;
-    grid-template-areas:
-      "h r"
-      "i r"
-      "f r"; 
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 3fr 1fr;
-  }
+.background-images {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.header {
-  grid-area: h;
-  background-color: #57B8BF;
+.ptext {
+  position: absolute;
+  top: 40%;
+  width: 100%;
 }
 
-.info {
-  grid-area: i;
-  background-color: #3A7B7F;
+.border {
+  background-color: var(--blue);
+  color: var(--main-white);
+  padding: 20px;
+}
+
+.content {
+  background-color: var(--second-white);
+  color: var(--main-grey);
+  text-align: center;
+  padding: 50px 50px;
 }
 
 .footer {
-  grid-area: f;
-  background-color: #1D3D40;
-  color: #ffffff;
+  margin: 0;
+  background-color: var(--black);
+  color: var(--second-grey);
+  text-align: center;
+  padding: 50px 50px;
 }
 
-.right {
-  grid-area: r;
-  background-color: #ffffff;
-  color: black;
+.footer h2 {
+  color: var(--main-white);
 }
+
+/* Images */
+#main-image {
+  background-image: url('../img/miami-ocean.jpg');
+  min-height: 100%;
+}
+
+#second-image {
+  background-image: url('../img/coding-laptop.jpg');
+  min-height: 60%;
+}
+
+#third-image {
+  background-image: url('../img/laptop-phones.jpg');
+  min-height: 60%;
+}
+
+#profile-pic {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 400px) {
+  p {
+    font-size: 14px;
+  }
+
+  .ptext {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  #profile-pic {
+    width: 200px;
+  }
+} 

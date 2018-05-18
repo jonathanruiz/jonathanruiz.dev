@@ -26,21 +26,21 @@ p {
 }
 
 .ptext .border {
-  background-color: rgb(10, 151, 151);
-  color: #fff;
+  background-color: #0a9797;
+  color: #ffffff;
   padding: 20px;
 }
 
 .content {
   background-color: #f4f4f4;
-  color: #666;
+  color: #666666;
   text-align: center;
   padding: 50px 50px;
 }
 
 
 /* Header */
-.main_image {
+.main-image {
   position: relative;
   opacity: 0.70;
   background-position: center;
@@ -54,6 +54,19 @@ p {
 /* Introduction */
 .profile-pic {
   width: 100%;
+}
+
+/* Image 2 */
+.secondary-image {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-image: url('../img/coding-laptop.jpg');
+  min-height: 60%;
 }
 
 /* Responsive Design */

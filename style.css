@@ -32,7 +32,19 @@ ul {
 }
 
 /* CSS Grid */
-@media (min-width: 960px) {
+@media screen and (min-width: 550px) {
+  .container {
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+    "h"
+    "r"
+    "i"
+    "f"
+  }
+}
+
+@media screen and (min-width: 960px) {
   .container {
     height: 100%;
     display: grid;

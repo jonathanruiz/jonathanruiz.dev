@@ -98,32 +98,61 @@ h2 {
 }
 
 /* Icons */
-.fa-html5, .fa-css3-alt, .fa-js,
-.fa-github {
+.skills {
+  display: grid;
+  grid-template: 
+  "hi ht"
+  "ci ct"
+  "ji jt"
+  "gi gt";
+}
+
+.icons {
   font-size: 5em;
-  position: relative;
+  padding: 5px 0px;
+}
+
+.icons-text {
+  margin: auto;
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: var(--main-grey);
 }
 
 .fa-html5 {
   color: #f16529;
+  grid-area: hi;
 }
 
 .fa-css3-alt {
   color: #369cd6;
+  grid-area: ci;
 }
 
 .fa-js {
   color: #f1be21;
+  grid-area: ji;
 }
 
 .fa-github {
   color: #666666;
+  grid-area: gi;
 }
 
-.icons-text {
-  font-family: 'Roboto';
-  font-size: 14px;
-  color: var(--main-grey);
+#html5-text {
+  grid-area: ht;
+}
+
+#css3-text {
+  grid-area: ct;
+}
+
+#js-text {
+  grid-area: jt;
+}
+
+#github-text {
+  grid-area: gt;
 }
 
 /* Responsive Design */

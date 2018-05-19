@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400,500,700,900" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
   <script src="main.js" type="text/javascript"></script>
   <title>Jonathan Ruiz</title>
 </head>
@@ -22,7 +23,7 @@
     </div>
   </header>
 
-  <main class="content">
+  <main id="profile" class="content">
     <img id="profile-pic" src="../img/profile-picture.jpg" alt="Profile picture">
     <h2>Hi, I'm Jonathan! Nice to meet you!</h2>
     <p>
@@ -37,26 +38,26 @@
 
   <section id="second-image" class="background-images"></section>
 
-  <section class="content">
+  <section id="skills" class="content">
     <h2>Skills</h2>
 
     <div class="skills">
-      <div class="icons">
+      <div id="html5"class="icons">
         <i class="fab fa-html5"></i>
       </div>
       <h2 id="html5-text" class="icons-text">HTML5</h2>
 
-      <div class="icons">
+      <div id="css3"class="icons">
         <i class="fab fa-css3-alt"></i>
       </div>
       <h2 id="css3-text" class="icons-text">CSS3</h2>
 
-      <div class="icons">
+      <div id="js" class="icons">
         <i class="fab fa-js"></i>
       </div>
       <h2 id="js-text" class="icons-text">Javascript</h2>
 
-      <div class="icons">
+      <div id="github" class="icons">
         <i class="fab fa-github"></i>
       </div>
       <h2 id="github-text" class="icons-text">GitHub</h2>
@@ -64,7 +65,7 @@
 
   </section>
 
-  <section class="content">
+  <section id="certifications" class="content">
     <h2>Certifications</h2>
     <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b6947e68-81f9-44d8-84a9-ad982f4fefa3"></div>
     <p>
@@ -75,12 +76,22 @@
   <section id="third-image" class="background-images"></section>
 
   <footer class="footer">
-    <h2>Footer</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt eius tenetur repellat nobis dolores voluptatibus velit
-      iusto ducimus at, placeat molestiae quis quos alias? Maiores amet natus obcaecati quas quae.
-    </p>
+    <h2>Contact Me</h2>
+    <a id="email" class="footer-icons tooltip" data-clipboard-text="jonadavruiz@gmail.com">
+      <i class="fas fa-envelope"></i>
+      <span class="tooltiptext">Copied!</span>
+    </a>
+    <a class="footer-icons" href="https://github.com/jonathanruiz">
+      <i class="fab fa-github"></i>
+    </a>
+    <a class="footer-icons" href="https://twitter.com/jonathandruiz">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+    <!-- This is the script to use Clipboard.js -->
+    <script src="main.js" type="text/javascript"></script>
   </footer>
+  
 </body>
 
 </html>

@@ -9,10 +9,11 @@
 }
 
 /* Resets */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 /* Typography */
@@ -25,7 +26,7 @@ html, body {
 
 /* General Styles */
 p {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   text-align: left;
 }
 
@@ -37,7 +38,7 @@ h2 {
 
 .background-images {
   position: relative;
-  opacity: 0.70;
+  opacity: 0.7;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -60,11 +61,22 @@ h2 {
   background-color: var(--second-white);
   color: var(--main-grey);
   text-align: center;
+}
+
+#profile {
+  padding: 50px 50px;
+}
+
+#skills {
+  padding: 50px 50px;
+}
+
+#certifications {
   padding: 50px 50px;
 }
 
 .footer {
-  margin: 0;
+  margin: auto;
   background-color: var(--black);
   color: var(--second-grey);
   text-align: center;
@@ -77,34 +89,35 @@ h2 {
 
 /* Images */
 #main-image {
-  background-image: url('../img/miami-ocean.jpg');
+  background-image: url("../img/miami-ocean.jpg");
   min-height: 100%;
 }
 
 #second-image {
-  background-image: url('../img/coding-laptop.jpg');
+  background-image: url("../img/coding-laptop.jpg");
   min-height: 60%;
 }
 
 #third-image {
-  background-image: url('../img/laptop-phones.jpg');
+  background-image: url("../img/laptop-phones.jpg");
   min-height: 60%;
 }
 
 #profile-pic {
   width: 100%;
   border-radius: 5px;
-  box-shadow: 0 10px 20px #00000000, 0 6px 6px #0000003A;
+  box-shadow: 0 10px 20px #00000000, 0 6px 6px #0000003a;
 }
 
-/* Icons */
+/* Skills Icons */
 .skills {
   display: grid;
-  grid-template: 
-  "hi ht"
-  "ci ct"
-  "ji jt"
-  "gi gt";
+  width: 100%;
+  grid-template:
+    "hi ht"
+    "ci ct"
+    "ji jt"
+    "gi gt";
 }
 
 .icons {
@@ -114,27 +127,27 @@ h2 {
 
 .icons-text {
   margin: auto;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 14px;
   color: var(--main-grey);
 }
 
-.fa-html5 {
+#html5 {
   color: #f16529;
   grid-area: hi;
 }
 
-.fa-css3-alt {
+#css3 {
   color: #369cd6;
   grid-area: ci;
 }
 
-.fa-js {
+#js {
   color: #f1be21;
   grid-area: ji;
 }
 
-.fa-github {
+#github {
   color: #666666;
   grid-area: gi;
 }
@@ -155,6 +168,54 @@ h2 {
   grid-area: gt;
 }
 
+/* Footer Icons */
+.footer p {
+  text-align: center;
+}
+
+.footer-icons {
+  text-decoration: none;
+  font-size: 3em;
+  padding: 0px 5px;
+  color: var(--second-grey);
+  transition: color 0.2s ease;
+}
+
+.footer-icons:active {
+  cursor: pointer;
+  color: var(--second-white);
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: var(--second-white);
+  text-align: center;
+  padding: 5px 0;
+
+  border-radius: 6px;
+  font-size: 14px;
+  width: 70px;
+  top: 100%;
+  left: 50%; 
+
+  margin-left: -35px; /* Use half of the width (70/2 = 35), to center the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:active .tooltiptext {
+  visibility: visible;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 400px) {
   p {
@@ -170,4 +231,24 @@ h2 {
   #profile-pic {
     width: 200px;
   }
-} 
+}
+
+@media screen and (min-width: 400px) {
+  #skills {
+    padding: 50px 0px;
+  }
+
+  .skills {
+    width: 400px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 960px) {
+
+  /* Footer */
+  .footer-icons:hover {
+  cursor: pointer;
+  color: var(--second-white);
+}
+}

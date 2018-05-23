@@ -259,12 +259,27 @@ h2 {
 
 @media screen and (min-width: 730px) {
   #profile {
-    height: 60%;
+    width: 640px;
+    margin: auto;
+  }
+
+  .ski-cert {
+    display: grid;
+    width: 100%;
+    grid-template:
+    "ski cert";
+  }
+
+  #skills {
+    grid-area: ski;
+  }
+
+  #certifications {
+    grid-area: cert;
   }
 }
 
 @media screen and (min-width: 960px) {
-
   /* Footer */
   .footer-icons:hover {
     cursor: pointer;

@@ -91,8 +91,6 @@ h2 {
   color: var(--main-white);
 }
 
-
-
 /* Images */
 #main-image {
   background-image: url("../img/miami-ocean.jpg");
@@ -215,7 +213,7 @@ h2 {
   font-size: 14px;
   width: 70px;
   top: 100%;
-  left: 50%; 
+  left: 50%;
 
   margin-left: -35px; /* Use half of the width (70/2 = 35), to center the tooltip */
   position: absolute;
@@ -261,9 +259,9 @@ h2 {
     display: grid;
     width: 100%;
     grid-template-areas:
-    "pn pn"
-    "pp p1"
-    "pp p2";
+      "pn pn"
+      "pp p1"
+      "pp p2";
   }
 
   #profile-name {
@@ -283,7 +281,6 @@ h2 {
   #profile-2 {
     grid-area: p2;
   }
-
 }
 
 @media screen and (min-width: 730px) {
@@ -295,8 +292,7 @@ h2 {
   .ski-cert {
     display: grid;
     width: 100%;
-    grid-template:
-    "ski cert";
+    grid-template: "ski cert";
   }
 
   #skills {
@@ -314,8 +310,8 @@ h2 {
   }
 
   .profile {
-  margin: auto;
-  width:  900px;
+    margin: auto;
+    width: 900px;
   }
 
   #profile-pic {

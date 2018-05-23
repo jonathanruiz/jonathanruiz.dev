@@ -8,8 +8,6 @@
   o.parentNode.insertBefore(s, o);
 })();
 
-// This for using the clipboard.js program to copy text.
-
-// (function () {
-//   let clipboard = new ClipboardJS('#email');
-// })();
+(function () {
+  let clipboard = new ClipboardJS('#email');
+})();

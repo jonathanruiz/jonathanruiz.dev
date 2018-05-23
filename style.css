@@ -63,16 +63,16 @@ h2 {
   text-align: center;
 }
 
-#profile {
-  padding: 50px 50px;
+.profile-padding {
+  padding: 50px;
 }
 
 #skills {
-  padding: 50px 50px;
+  padding: 50px;
 }
 
 #certifications {
-  padding: 50px 50px;
+  padding: 50px;
 }
 
 #certifications p {
@@ -84,12 +84,14 @@ h2 {
   background-color: var(--black);
   color: var(--second-grey);
   text-align: center;
-  padding: 50px 50px;
+  padding: 50px;
 }
 
 .footer h2 {
   color: var(--main-white);
 }
+
+
 
 /* Images */
 #main-image {
@@ -118,6 +120,7 @@ h2 {
   display: grid;
   width: 100%;
   grid-template:
+    "sh sh"
     "hi ht"
     "ci ct"
     "ji jt"
@@ -134,6 +137,10 @@ h2 {
   font-family: "Roboto";
   font-size: 14px;
   color: var(--main-grey);
+}
+
+#skills-header {
+  grid-area: sh;
 }
 
 #html5 {
@@ -249,17 +256,39 @@ h2 {
 }
 
 @media screen and (min-width: 640px) {
-  #profile-pic {
-    width: 250px;
-    float: left;
-    margin-right: 50px;
-    margin-bottom: 60px;
+  /* Profile */
+  .profile {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+    "pn pn"
+    "pp p1"
+    "pp p2";
   }
+
+  #profile-name {
+    grid-area: pn;
+  }
+
+  #profile-pic {
+    grid-area: pp;
+    width: 250px;
+    margin-right: 50px;
+  }
+
+  #profile-1 {
+    grid-area: p1;
+  }
+
+  #profile-2 {
+    grid-area: p2;
+  }
+
 }
 
 @media screen and (min-width: 730px) {
   #profile {
-    width: 640px;
+    width: 630px;
     margin: auto;
   }
 
@@ -280,6 +309,23 @@ h2 {
 }
 
 @media screen and (min-width: 960px) {
+  p {
+    font-size: 20px;
+  }
+
+  .profile {
+  margin: auto;
+  width:  900px;
+  }
+
+  #profile-pic {
+    width: 300px;
+  }
+
+  .icons-text {
+    font-size: 16px;
+  }
+
   /* Footer */
   .footer-icons:hover {
     cursor: pointer;

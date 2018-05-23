@@ -95,17 +95,17 @@ h2 {
 
 /* Images */
 #main-image {
-  background-image: url("../img/miami-ocean.jpg");
+  background-image: url("/img/miami-ocean.jpg");
   min-height: 100%;
 }
 
 #second-image {
-  background-image: url("../img/coding-laptop.jpg");
+  background-image: url("/img/coding-laptop.jpg");
   min-height: 60%;
 }
 
 #third-image {
-  background-image: url("../img/laptop-phones.jpg");
+  background-image: url("/img/laptop-phones.jpg");
   min-height: 60%;
 }
 

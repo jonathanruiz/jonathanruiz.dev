@@ -1,4 +1,4 @@
-// Fucntion to retrieve MTA badge
+// Function to retrieve MTA badge
 (function () {
   var s = document.createElement('script');
   s.type = 'text/javascript';

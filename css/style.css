@@ -243,6 +243,13 @@ h2 {
   }
 }
 
+/* 
+  TODO: Keep both skills and certifications at 400px
+  with the additional 50px on each side for padding.
+  Only do this when it is large enough otherwise it 
+  will overflow.
+ */
+
 @media screen and (min-width: 400px) {
   #skills {
     padding: 50px 0px;

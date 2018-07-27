@@ -68,11 +68,11 @@ h2 {
 }
 
 #skills {
-  padding: 50px;
+  padding: 50px 0px;
 }
 
 #certifications {
-  padding: 50px;
+  padding: 50px 0px;
 }
 
 #certifications p {
@@ -243,9 +243,18 @@ h2 {
   }
 }
 
+/* 
+  TODO: Keep both skills and certifications at 400px
+  with the additional 50px on each side for padding.
+  Only do this when it is large enough otherwise it 
+  will overflow.
+ */
+
 @media screen and (min-width: 400px) {
   #skills {
     padding: 50px 0px;
+    width: 400px;
+    margin: auto;
   }
 
   .skills {
@@ -254,9 +263,14 @@ h2 {
   }
 
   #certifications {
+    margin: auto;
+  }
+
+  #certifications p {
     width: 400px;
     margin: auto;
   }
+
 }
 
 @media screen and (min-width: 640px) {
@@ -294,7 +308,7 @@ h2 {
 
 }
 
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 800px) {
   #profile {
     width: 630px;
     margin: auto;

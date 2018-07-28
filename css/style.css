@@ -91,6 +91,58 @@ h2 {
   color: var(--main-white);
 }
 
+/* Resume Button */
+.label-container {
+  position: fixed;
+  bottom: 48px;
+  right: 105px;
+  display: table;
+
+  visibility: hidden;
+  z-index: 1;
+}
+
+.label-text {
+  color: #fff;
+  background: rgba(51, 51, 51, 0.5);
+  display: table-cell;
+  vertical-align: middle;
+  
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+
+  right: 40px;
+  background-color: var(--blue);
+  color: #fff;
+  border-radius: 50px;
+
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1;
+}
+
+.my-float {
+  margin-top: 22px;
+}
+
+a.float + div.label-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+a.float:hover + div.label-container {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* Images */
 #main-image {
   background-image: url("/img/miami-ocean.jpg");
@@ -214,7 +266,7 @@ h2 {
   font-size: 14px;
   width: 70px;
   top: 100%;
-  left: 50%; 
+  left: 50%;
 
   margin-left: -35px; /* Use half of the width (70/2 = 35), to center the tooltip */
   position: absolute;
@@ -270,7 +322,6 @@ h2 {
     width: 400px;
     margin: auto;
   }
-
 }
 
 @media screen and (min-width: 640px) {
@@ -279,9 +330,9 @@ h2 {
     display: grid;
     width: 100%;
     grid-template-areas:
-    "pn pn"
-    "pp p1"
-    "pp p2";
+      "pn pn"
+      "pp p1"
+      "pp p2";
   }
 
   #profile-name {
@@ -305,7 +356,6 @@ h2 {
   .icons-text {
     font-size: 16px;
   }
-
 }
 
 @media screen and (min-width: 800px) {
@@ -317,8 +367,7 @@ h2 {
   .ski-cert {
     display: grid;
     width: 100%;
-    grid-template:
-    "ski cert";
+    grid-template: "ski cert";
   }
 
   #skills {
@@ -336,8 +385,8 @@ h2 {
   }
 
   .profile {
-  margin: auto;
-  width:  900px;
+    margin: auto;
+    width: 900px;
   }
 
   #profile-pic {

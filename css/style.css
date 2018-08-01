@@ -81,10 +81,12 @@ h2 {
 
 .footer {
   margin: auto;
+  padding: 50px;
   background-color: var(--black);
   color: var(--second-grey);
   text-align: center;
-  padding: 50px;
+  position: relative;
+  z-index: 2;
 }
 
 .footer h2 {

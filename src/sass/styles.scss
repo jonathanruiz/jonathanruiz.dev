@@ -1,0 +1,407 @@
+/* CSS Variables */
+:root {
+  --black: #282e34;
+  --main-grey: #666666;
+  --second-grey: #92999f;
+  --main-white: #ffffff;
+  --second-white: #f4f4f4;
+  --blue: #0a9797;
+}
+
+/* Resets */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto";
+}
+
+/* Typography */
+.ptext {
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+/* General Styles */
+p {
+  font-family: "Open Sans";
+  text-align: left;
+}
+
+h2 {
+  color: var(--blue);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.background-images {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ptext {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+.border {
+  background-color: var(--blue);
+  color: var(--main-white);
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.content {
+  background-color: var(--second-white);
+  color: var(--main-grey);
+  text-align: center;
+}
+
+.profile-padding {
+  padding: 50px;
+}
+
+#skills {
+  padding: 50px 0px;
+}
+
+#certifications {
+  padding: 50px 0px;
+}
+
+#certifications p {
+  text-align: center;
+}
+
+.footer {
+  margin: auto;
+  padding: 50px;
+  background-color: var(--black);
+  color: var(--second-grey);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.footer h2 {
+  color: var(--main-white);
+}
+
+/* Resume Button */
+.label-container {
+  position: fixed;
+  bottom: 48px;
+  right: 105px;
+  display: table;
+
+  visibility: hidden;
+  z-index: 1;
+}
+
+.label-text {
+  color: #fff;
+  background: rgba(51, 51, 51, 0.5);
+  display: table-cell;
+  vertical-align: middle;
+
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+
+  right: 40px;
+  background-color: var(--blue);
+  color: #fff;
+  border-radius: 50px;
+
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1;
+}
+
+.my-float {
+  margin-top: 22px;
+}
+
+a.float + div.label-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+a.float:hover + div.label-container {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Images */
+#main-image {
+  background-image: url("/img/miami-ocean.jpg");
+  min-height: 100%;
+}
+
+#second-image {
+  background-image: url("/img/coding-laptop.jpg");
+  min-height: 60%;
+}
+
+#third-image {
+  background-image: url("/img/laptop-phones.jpg");
+  min-height: 60%;
+}
+
+#profile-pic {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px #00000000, 0 6px 6px #0000003a;
+}
+
+/* Skills Icons */
+.skills {
+  display: grid;
+  width: 100%;
+  grid-auto-columns: 1fr 1fr;
+  grid-template:
+    "sh sh"
+    "hi ht"
+    "ci ct"
+    "ji jt"
+    "gi gt";
+}
+
+.icons {
+  font-size: 5em;
+  padding: 5px 0px;
+}
+
+.icons-text {
+  margin: auto;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: var(--main-grey);
+}
+
+#skills-header {
+  grid-area: sh;
+}
+
+#html5 {
+  color: #f16529;
+  grid-area: hi;
+}
+
+#css3 {
+  color: #369cd6;
+  grid-area: ci;
+}
+
+#js {
+  color: #f1be21;
+  grid-area: ji;
+}
+
+#github {
+  color: #666666;
+  grid-area: gi;
+}
+
+#html5-text {
+  grid-area: ht;
+}
+
+#css3-text {
+  grid-area: ct;
+}
+
+#js-text {
+  grid-area: jt;
+}
+
+#github-text {
+  grid-area: gt;
+}
+
+/* Footer Icons */
+.footer p {
+  text-align: center;
+}
+
+.footer-icons {
+  text-decoration: none;
+  font-size: 3em;
+  padding: 0px 20px;
+  color: var(--second-grey);
+  transition: color 0.2s ease;
+}
+
+.footer-icons:active {
+  cursor: pointer;
+  color: var(--second-white);
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: var(--second-white);
+  text-align: center;
+  padding: 5px 0;
+
+  border-radius: 6px;
+  font-size: 14px;
+  width: 70px;
+  top: 100%;
+  left: 50%;
+
+  margin-left: -35px; /* Use half of the width (70/2 = 35), to center the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:active .tooltiptext {
+  visibility: visible;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 400px) {
+  p {
+    font-size: 16px;
+  }
+
+  .ptext {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  #profile-pic {
+    width: 200px;
+  }
+}
+
+/* 
+  TODO: Keep both skills and certifications at 400px
+  with the additional 50px on each side for padding.
+  Only do this when it is large enough otherwise it 
+  will overflow.
+ */
+
+@media screen and (min-width: 400px) {
+  #skills {
+    padding: 50px 0px;
+    width: 400px;
+    margin: auto;
+  }
+
+  .skills {
+    width: 400px;
+    margin: auto;
+  }
+
+  #certifications {
+    margin: auto;
+  }
+
+  #certifications p {
+    width: 400px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  /* Profile */
+  .profile {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "pn pn"
+      "pp p1"
+      "pp p2";
+  }
+
+  #profile-name {
+    grid-area: pn;
+  }
+
+  #profile-pic {
+    grid-area: pp;
+    width: 250px;
+    margin-right: 50px;
+  }
+
+  #profile-1 {
+    grid-area: p1;
+  }
+
+  #profile-2 {
+    grid-area: p2;
+  }
+
+  .icons-text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #profile {
+    width: 630px;
+    margin: auto;
+  }
+
+  .ski-cert {
+    display: grid;
+    width: 100%;
+    grid-template: "ski cert";
+  }
+
+  #skills {
+    grid-area: ski;
+  }
+
+  #certifications {
+    grid-area: cert;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  p {
+    font-size: 20px;
+  }
+
+  .profile {
+    margin: auto;
+    width: 900px;
+  }
+
+  #profile-pic {
+    width: 300px;
+  }
+
+  .icons-text {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footer-icons:hover {
+    cursor: pointer;
+    color: var(--second-white);
+  }
+}

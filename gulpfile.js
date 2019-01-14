@@ -26,7 +26,7 @@ gulp.task("scripts-dist", () => {
   gulp
     .src("src/js/**/*.js")
     .pipe(minify({ mangle: { keepClassName: true } }))
-    .pipe(gulp.dest("docs/js"));
+    .pipe(gulp.dest("dist/js"));
 });
 
 // Convert the SASS files into CSS files
@@ -51,7 +51,7 @@ gulp.task("styles", () => {
         browsers: ["last 2 versions"]
       })
     )
-    .pipe(gulp.dest("docs/css"));
+    .pipe(gulp.dest("dist/css"));
 });
 
 // Lint the files
@@ -73,10 +73,10 @@ gulp.task("lint", () => {
 
 // Copy index.html file
 gulp.task("copy-html", () => {
-  gulp.src("./src/*.html").pipe(gulp.dest("./docs"));
+  gulp.src("./src/*.html").pipe(gulp.dest("./dist"));
 });
 
 // Copy the images
 gulp.task("copy-images", () => {
-  gulp.src("src/img/**").pipe(gulp.dest("docs/img"));
+  gulp.src("src/img/**").pipe(gulp.dest("dist/img"));
 });

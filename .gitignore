@@ -2,4 +2,3 @@ node_modules
 src
 package-lock.json
 .eslintrc
-gulpfile.js

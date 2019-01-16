@@ -16,6 +16,7 @@ gulp.task("default", ["copy-html", "styles", "lint"], () => {
 gulp.task("dist", [
   "copy-html",
   "copy-images",
+  "data",
   "styles",
   "lint",
   "scripts-dist"
@@ -27,6 +28,11 @@ gulp.task("scripts-dist", () => {
     .src("src/js/**/*.js")
     .pipe(minify({ mangle: { keepClassName: true } }))
     .pipe(gulp.dest("dist/js"));
+});
+
+// Transfers data to the dist
+gulp.task("data", () => {
+  gulp.src("src/data/*").pipe(gulp.dest("dist/data"));
 });
 
 // Convert the SASS files into CSS files

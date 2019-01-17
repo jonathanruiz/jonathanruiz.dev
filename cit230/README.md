@@ -1,3 +1,3 @@
 ## Front End Web Dev class
 
-This is the class folde
+This is the class folder

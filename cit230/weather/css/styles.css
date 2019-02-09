@@ -19,9 +19,6 @@
 @import url("normalize.css");
 
 /* General */
-:root {
-  --primary-color: #0e89d5;
-}
 
 body {
   font-size: 1.5em;
@@ -40,7 +37,7 @@ html {
 
 header,
 footer {
-  background-color: var(--primary-color);
+  background-color: #0e89d5;
 }
 
 h1,

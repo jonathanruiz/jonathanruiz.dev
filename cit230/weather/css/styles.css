@@ -1,0 +1,154 @@
+/* ******************************
+*  Stylesheet for Screened Devices
+*  Created by: Put your name here
+*  
+*  1.  Includes (fonts and supplementary stylesheets)
+*  1.1 Normalize
+*  1.2 Google fonts
+*
+*  2.  General Styles (for all pages and devices)
+*
+*  3.  Mobile First (styles specific to small screens)
+*
+*  4.  Large Screen Styles (Media Queries begin here)
+*
+* ****************************** */
+
+/* Imports */
+@import url("https://fonts.googleapis.com/css?family=Sansita");
+@import url("normalize.css");
+
+/* General */
+:root {
+  --primary-color: #0e89d5;
+}
+
+body {
+  font-size: 1.5em;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header,
+footer {
+  background-color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sansita", sans-serif;
+}
+
+nav {
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  text-align: center;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  padding: 5px 60px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+
+footer {
+  margin-bottom: 2.5em;
+}
+
+.tile {
+  background-color: rgba(200, 200, 200, 0.6);
+  margin: 0.2em auto;
+  border: 1px solid;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#site-brand {
+  display: inline;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+#temps h3 {
+  margin: 0;
+  font-size: 5em;
+}
+
+#high {
+  color: red;
+}
+
+#low {
+  color: blue;
+}
+
+#wind li {
+  display: block;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.container p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#summary {
+  background-image: url("../images/rain.jpg");
+}
+
+#summary img {
+  width: 400px;
+}
+
+#hourly ul {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+/* Mobile */
+
+/* Larger Devices */

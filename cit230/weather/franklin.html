@@ -8,68 +8,77 @@
       content="Weather site for the small town of Franklin, Idaho."
     />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
-    <header>
+    <header id="page-header">
       <img src="./images/logo.jpg" alt="raindrops on an unbrella" />
-      <h1>The Weather Site</h1>
+      <h1 id="site-brand">The Weather Site</h1>
     </header>
     <nav>
       <ul>
         <li>
           <a href="#" title="Go to the Weather Site home page">Current</a>
+        </li>
+        <li>
           <a href="#" title="Go to the Search Site home page">Search</a>
+        </li>
+        <li>
           <a href="#" title="Go to the Franklin Site home page">Franklin</a>
+        </li>
+        <li>
           <a href="#" title="Go to the Greenville Site home page">Greenville</a>
         </li>
       </ul>
     </nav>
     <main>
       <h1>Franklin, Idaho</h1>
-      <ul>
-        <li><strong>Zip:</strong> 83237</li>
-        <li><strong>Elevation:</strong> 4968 ft.</li>
+      <ul id="franklin-location">
+        <li><strong>Zip:</strong> 83237 |</li>
+        <li><strong>Elevation:</strong> 4968 ft. |</li>
         <li><strong>Location: </strong> 42.07&deg; N, 111.79&deg; W</li>
       </ul>
-      <section>
+      <section id="temps" class="tile">
         <h2>Temperature</h2>
-        <h3>40&deg; F</h3>
+        <h3>40&deg;F</h3>
         <ul>
-          <li>64&deg; F</li>
-          <li>41&deg; F</li>
+          <li id="high">64&deg;F</li>
+          <li id="low">41&deg;F</li>
         </ul>
-        <p>Feels Like 40&deg; F</p>
+        <p>Feels Like 40&deg;F</p>
       </section>
-      <section>
+      <section id="wind" class="tile">
         <h2>Wind</h2>
-        <img src="./images/wind-pointer.png" alt="wind pointer" />
-        <p>5 mph</p>
+        <div class="container">
+          <img src="./images/wind-pointer.png" alt="wind pointer" />
+          <p>5 mph</p>
+        </div>
         <ul>
           <li><strong>Direction</strong>: SW</li>
           <li><strong>Gusts</strong>: 10-12 mph</li>
         </ul>
       </section>
-      <section>
+      <section id="summary" class="tile">
         <h2>Rain</h2>
         <img src="./images/rain.jpg" alt="clear skies" />
       </section>
-      <section>
+      <section id="hourly" class="tile">
         <h2>Hourly Forecast</h2>
         <ul>
-          <li>10am: 41&deg; F</li>
-          <li>11am: 41&deg; F</li>
-          <li>12pm: 41&deg; F</li>
-          <li>1pm: 41&deg; F</li>
-          <li>2pm: 41&deg; F</li>
-          <li>3pm: 41&deg; F</li>
-          <li>4pm: 42&deg; F</li>
-          <li>5pm: 44&deg; F</li>
-          <li>6pm: 44&deg; F</li>
-          <li>7pm: 46&deg; F</li>
-          <li>8pm: 49&deg; F</li>
-          <li>9pm: 51&deg; F</li>
-          <li>10pm: 55&deg; F</li>
+          <li>10am: 41&deg;F |</li>
+          <li>11am: 41&deg;F |</li>
+          <li>12pm: 41&deg;F |</li>
+          <li>1pm: 41&deg;F |</li>
+          <li>2pm: 41&deg;F |</li>
+          <li>3pm: 41&deg;F |</li>
+          <li>4pm: 42&deg;F |</li>
+          <li>5pm: 44&deg;F |</li>
+          <li>6pm: 44&deg;F |</li>
+          <li>7pm: 46&deg;F |</li>
+          <li>8pm: 49&deg;F |</li>
+          <li>9pm: 51&deg;F |</li>
+          <li>10pm: 55&deg;F</li>
         </ul>
       </section>
     </main>

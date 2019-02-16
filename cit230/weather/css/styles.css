@@ -49,24 +49,30 @@ h6 {
   font-family: "Sansita", sans-serif;
 }
 
-nav {
-  z-index: 1;
+#page-header img {
+  width: 50px;
+}
+
+#page-header h1 {
+  font-size: 1.5em;
+}
+
+#page-nav {
   position: fixed;
+  width: 100%;
+  z-index: 1;
   bottom: 0;
   left: 0;
   background-color: #0e89d5;
-  text-align: center;
-  width: 100%;
 }
 
-nav ul {
+#page-nav ul {
   display: flex;
-  justify-content: space-between;
-  margin: 10px auto;
-  padding: 5px 60px;
+  font-size: 1rem;
+  justify-content: space-evenly;
 }
 
-nav ul li a {
+#page-nav ul li a {
   color: #ffffff;
   text-decoration: none;
 }
@@ -137,15 +143,29 @@ footer {
   background-image: url("../images/rain.jpg");
 }
 
-#summary img {
-  width: 400px;
-}
-
 #hourly ul {
   white-space: nowrap;
   overflow-x: scroll;
 }
 
 /* Mobile */
+#summary img {
+  width: 100%;
+}
 
 /* Larger Devices */
+@media screen and (min-width: 425px) {
+  #summary img {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #page-nav ul {
+    font-size: 2rem;
+  }
+
+  footer {
+    margin-bottom: 4.5em;
+  }
+}

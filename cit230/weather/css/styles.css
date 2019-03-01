@@ -131,16 +131,61 @@ footer {
   text-align: center;
 }
 
+#curWeather {
+  background-size: cover;
+}
+
+#dial {
+  height: 150px;
+  width: 150px;
+  background: no-repeat center/85% url("../images/wind-pointer.png");
+  z-index: 100;
+  margin: -0.6em auto 0;
+}
+
+.n {
+  transform: rotate(0deg);
+}
+
+.ne {
+  transform: rotate(45deg);
+}
+
+.e {
+  transform: rotate(90deg);
+}
+
+.se {
+  transform: rotate(135deg);
+}
+
+.s {
+  transform: rotate(180deg);
+}
+
+.sw {
+  transform: rotate(225deg);
+}
+
+.w {
+  transform: rotate(270deg);
+}
+
+.nw {
+  transform: rotate(315deg);
+}
+
+/* Background pictures for summary */
+.clear {
+  background-image: url("../images/clear.jpg");
+}
+
 .container p {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-#summary {
-  background-image: url("../images/rain.jpg");
 }
 
 #hourly ul {
@@ -167,5 +212,13 @@ footer {
 
   footer {
     margin-bottom: 4.5em;
+  }
+}
+
+@media screen and (min-width: 986px) {
+  #page-nav {
+    position: absolute;
+    bottom: unset;
+    left: unset;
   }
 }

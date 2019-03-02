@@ -98,6 +98,7 @@ footer {
 .tile {
   background-color: rgba(200, 200, 200, 0.6);
   margin: 0.2em auto;
+  padding: 20px;
   border: 1px solid;
   border-radius: 15px;
   text-align: center;
@@ -175,17 +176,16 @@ footer {
   transform: rotate(315deg);
 }
 
-/* Background pictures for summary */
-.clear {
-  background-image: url("../images/clear.jpg");
-}
-
 .container p {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#hourly {
+  width: 100%;
 }
 
 #hourly ul {
@@ -196,6 +196,47 @@ footer {
 /* Mobile */
 #summary img {
   width: 100%;
+}
+
+/* Mobile Background pictures for summary */
+.background-clear {
+  background-image: url("../images/clear-small.jpg");
+}
+
+.background-rain {
+  background-image: url("../images/rain-small.jpg");
+}
+
+.background-snow {
+  background-image: url("../images/snow-small.jpg");
+}
+
+.background-clouds {
+  background-color: url("../images/clouds-small.jpg");
+}
+
+.background-fog {
+  background-image: url("../images/fog-small.jpg");
+}
+
+.clear {
+  content: url("../images/clear-small.jpg");
+}
+
+.rain {
+  content: url("../images/rain-small.jpg");
+}
+
+.snow {
+  content: url("../images/snow-small.jpg");
+}
+
+.clouds {
+  content: url("../images/clouds-small.jpg");
+}
+
+.fog {
+  content: url("../images/fog-small.jpg");
 }
 
 /* Larger Devices */
@@ -216,9 +257,66 @@ footer {
 }
 
 @media screen and (min-width: 986px) {
+  /* Mobile Background pictures for summary */
+  .background-clear {
+    background-image: url("../images/clear-large.jpg");
+  }
+
+  .background-rain {
+    background-image: url("../images/rain-large.jpg");
+  }
+
+  .background-snow {
+    background-image: url("../images/snow-large.jpg");
+  }
+
+  .background-clouds {
+    background-color: url("../images/clouds-large.jpg");
+  }
+
+  .background-fog {
+    background-image: url("../images/fog-large.jpg");
+  }
+
+  .clear {
+    content: url("../images/clear-large.jpg");
+  }
+
+  .rain {
+    content: url("../images/rain-large.jpg");
+  }
+
+  .snow {
+    content: url("../images/snow-large.jpg");
+  }
+
+  .clouds {
+    content: url("../images/clouds-large.jpg");
+  }
+
+  .fog {
+    content: url("../images/fog-large.jpg");
+  }
+
+  #temps,
+  #wind,
+  #summary {
+    width: 33%;
+  }
+
+  #curWeather {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   #page-nav {
     position: absolute;
     bottom: unset;
     left: unset;
+  }
+
+  footer {
+    margin-bottom: 0;
   }
 }

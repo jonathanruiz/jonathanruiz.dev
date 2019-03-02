@@ -36,7 +36,9 @@
       <h1>Franklin, Idaho</h1>
       <ul id="franklin-location">
         <li><strong>Zip:</strong> 83237 |</li>
-        <li><strong>Elevation:</strong> 4968 ft. |</li>
+        <li>
+          <strong>Elevation:</strong> <span id="elevation">3000</span> ft. |
+        </li>
         <li><strong>Location:</strong> 42.07&deg; N, 111.79&deg; W</li>
       </ul>
       <div id="curWeather">
@@ -61,29 +63,32 @@
           </ul>
         </section>
         <section id="summary" class="tile">
-          <h2>Rain</h2>
-          <img src="./images/rain.jpg" alt="clear skies" />
+          <h2 id="condition">Rain</h2>
+          <img
+            id="summaryImage"
+            src="./images/rain-small.jpg"
+            alt="clear skies"
+          />
+        </section>
+        <section id="hourly" class="tile">
+          <h2>Hourly Forecast</h2>
+          <ul>
+            <li>10am: 41&deg;F |</li>
+            <li>11am: 41&deg;F |</li>
+            <li>12pm: 41&deg;F |</li>
+            <li>1pm: 41&deg;F |</li>
+            <li>2pm: 41&deg;F |</li>
+            <li>3pm: 41&deg;F |</li>
+            <li>4pm: 42&deg;F |</li>
+            <li>5pm: 44&deg;F |</li>
+            <li>6pm: 44&deg;F |</li>
+            <li>7pm: 46&deg;F |</li>
+            <li>8pm: 49&deg;F |</li>
+            <li>9pm: 51&deg;F |</li>
+            <li>10pm: 55&deg;F</li>
+          </ul>
         </section>
       </div>
-
-      <section id="hourly" class="tile">
-        <h2>Hourly Forecast</h2>
-        <ul>
-          <li>10am: 41&deg;F |</li>
-          <li>11am: 41&deg;F |</li>
-          <li>12pm: 41&deg;F |</li>
-          <li>1pm: 41&deg;F |</li>
-          <li>2pm: 41&deg;F |</li>
-          <li>3pm: 41&deg;F |</li>
-          <li>4pm: 42&deg;F |</li>
-          <li>5pm: 44&deg;F |</li>
-          <li>6pm: 44&deg;F |</li>
-          <li>7pm: 46&deg;F |</li>
-          <li>8pm: 49&deg;F |</li>
-          <li>9pm: 51&deg;F |</li>
-          <li>10pm: 55&deg;F</li>
-        </ul>
-      </section>
     </main>
     <footer>
       Jonathan Ruiz&copy; February 2, 2019, The Weather Site

@@ -212,7 +212,7 @@ footer {
 }
 
 .background-clouds {
-  background-color: url("../images/clouds-small.jpg");
+  background-image: url("../images/clouds-small.jpg");
 }
 
 .background-fog {
@@ -271,7 +271,7 @@ footer {
   }
 
   .background-clouds {
-    background-color: url("../images/clouds-large.jpg");
+    background-image: url("../images/clouds-large.jpg");
   }
 
   .background-fog {

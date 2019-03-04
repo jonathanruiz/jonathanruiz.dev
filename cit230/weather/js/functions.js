@@ -149,7 +149,7 @@ let changeSummaryImage = () => {
 
 // Convert meters to feet
 let convertMeters = meters => {
-  // Math Ceil rounds up to the nearest integer
+  // Math floor rounds down to the nearest integer
   return Math.floor(meters * 3.28084);
 };
 

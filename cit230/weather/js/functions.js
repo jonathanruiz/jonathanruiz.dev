@@ -82,6 +82,7 @@ let windDial = direction => {
   }
 };
 
+// Gets the weather condition
 let getCondition = condition => {
   switch (condition.toLowerCase()) {
     case "clear":
@@ -98,7 +99,7 @@ let getCondition = condition => {
       console.log("The condition is snowy");
       return "snow";
     case "cloud":
-    case "clody":
+    case "cloudy":
     case "partly cloudy":
       console.log("The condition is cloudy");
       return "clouds";
@@ -149,7 +150,7 @@ let changeSummaryImage = () => {
 // Convert meters to feet
 let convertMeters = meters => {
   // Math Ceil rounds up to the nearest integer
-  return Math.ceil(meters * 3.28084);
+  return Math.floor(meters * 3.28084);
 };
 
 buildWC(speed, temp);

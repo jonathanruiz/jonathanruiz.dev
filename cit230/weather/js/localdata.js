@@ -102,7 +102,27 @@ let fetchData = weatherURL => {
 
       // Set the hourly temperature information
       let hourlyEl = document.getElementById("hourly-list");
-      hourlyEl.innerHTML = hourly;
+      hourlyEl.innerHTML = "";
+      for (let i = 0; i < hourly.length; i++) {
+        let times = [
+          "9 AM",
+          "10 AM",
+          "11 AM",
+          "12 PM",
+          "1 PM",
+          "2 PM",
+          "3 PM",
+          "4 PM",
+          "5 PM",
+          "6 PM",
+          "7 PM",
+          "8 PM",
+          "9 PM"
+        ];
+        hourlyEl.innerHTML += `<li>${times[i]}: ${
+          hourly[i]
+        }&deg;F |&nbsp;</li>`;
+      }
 
       // Set the zip
       let zipEl = document.getElementById("zip");

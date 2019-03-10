@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8" />
-    <title>Franklin, ID | Weather Site</title>
+    <title id="page-title">| Weather Site</title>
     <meta
       name="description"
       content="Weather site for the small town of Franklin, Idaho."
@@ -25,28 +25,37 @@
           <a href="#" title="Go to the Search Site home page">Search</a>
         </li>
         <li>
-          <a href="#" title="Go to the Franklin Site home page">Franklin</a>
+          <a href="./franklin.html" title="Go to the Franklin Site home page"
+            >Franklin</a
+          >
         </li>
         <li>
-          <a href="./franklin.html" title="Go to the Greenville Site home page"
-            >Greenville</a
-          >
+          <a href="#" title="Go to the Greenville Site home page">Greenville</a>
         </li>
       </ul>
     </nav>
-    <main>
-      <h1>Franklin, Idaho</h1>
+    <section id="status">
+      Please be patient while I get your weather information.
+    </section>
+    <main id="main-content" class="hide">
+      <h1 id="contentHeading">Franklin, Idaho</h1>
       <ul id="franklin-location">
-        <li><strong>Zip:</strong> 83237 |</li>
+        <li><strong>Zip:</strong> <span id="zip">83237</span> |</li>
         <li>
           <strong>Elevation:</strong> <span id="elevation">3000</span> ft. |
         </li>
-        <li><strong>Location:</strong> 42.07&deg; N, 111.79&deg; W</li>
+        <li>
+          <strong>Location:</strong>
+          <span id="latitude">42.07</span>&deg;
+          <span id="latitude-direction">N</span>,
+          <span id="longitude">111.79</span>&deg;
+          <span id="longitude-direction">W</span>
+        </li>
       </ul>
       <div id="curWeather">
         <section id="temps" class="tile">
           <h2>Temperature</h2>
-          <h3>40&deg;F</h3>
+          <h3 id="temp">40&deg;F</h3>
           <ul>
             <li id="high">64&deg;F</li>
             <li id="low">41&deg;F</li>
@@ -57,11 +66,11 @@
           <h2>Wind</h2>
           <div class="container">
             <div id="dial" class="e"></div>
-            <p>5 mph</p>
+            <p><span id="wind">5</span> mph</p>
           </div>
           <ul>
             <li><strong>Direction</strong>: <span id="direction">NW</span></li>
-            <li><strong>Gusts</strong>: 10-12 mph</li>
+            <li><strong>Gusts</strong>: <span id="gusts">10-12</span> mph</li>
           </ul>
         </section>
         <section id="summary" class="tile">
@@ -96,6 +105,8 @@
       Jonathan Ruiz&copy; February 2, 2019, The Weather Site
     </footer>
 
-    <script src="js/functions.js"></script>
+    <script src="js/localdata.js"></script>
+    <!-- The async tag makes sure that functions is loaded after localdata.js-->
+    <script async src="js/functions.js"></script>
   </body>
 </html>

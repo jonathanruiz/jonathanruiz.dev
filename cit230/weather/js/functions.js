@@ -4,13 +4,17 @@
 
 console.log("My javascript is being read.");
 
-const temp = 31;
-const speed = 5;
+const temp = document.getElementById("temp").innerHTML;
+const speed = document.getElementById("wind").innerHTML;
 const direction = document.getElementById("direction").innerHTML;
 const summaryImage = document.getElementById("summaryImage");
 const condition = document.getElementById("condition").innerHTML;
 const curWeather = document.getElementById("curWeather");
 const elevation = document.getElementById("elevation");
+const longitude = document.getElementById("longitude");
+const latitude = document.getElementById("latitude");
+const longitudeDirection = document.getElementById("longitude-direction");
+const latitudeDirection = document.getElementById("latitude-direction");
 
 // Calculate the Windchill
 let buildWC = (speed, temp) => {
@@ -92,6 +96,8 @@ let getCondition = condition => {
     case "rainy":
     case "wet":
     case "wet weather":
+    case "thunderstorms":
+    case "storms":
       console.log("The condition is rain");
       return "rain";
     case "snow":
@@ -116,35 +122,24 @@ let changeSummaryImage = () => {
   switch (weatherCondition) {
     case "clear":
       curWeather.setAttribute("class", "background-clear");
-      summaryImage.setAttribute("class", weatherCondition);
-      summaryImage.setAttribute("alt", weatherCondition);
-      console.log(`Set the image and alts to ${weatherCondition}`);
       break;
     case "rain":
       curWeather.setAttribute("class", "background-rain");
-      summaryImage.setAttribute("class", weatherCondition);
-      summaryImage.setAttribute("alt", weatherCondition);
-      console.log(`Set the image and alts to ${weatherCondition}`);
       break;
     case "snow":
       curWeather.setAttribute("class", "background-snow");
-      summaryImage.setAttribute("class", weatherCondition);
-      summaryImage.setAttribute("alt", weatherCondition);
-      console.log(`Set the image and alts to ${weatherCondition}`);
       break;
     case "cloud":
       curWeather.setAttribute("class", "background-cloud");
-      summaryImage.setAttribute("class", weatherCondition);
-      summaryImage.setAttribute("alt", weatherCondition);
-      console.log(`Set the image and alts to ${weatherCondition}`);
       break;
     case "fog":
       curWeather.setAttribute("class", "background-fog");
-      summaryImage.setAttribute("class", weatherCondition);
-      summaryImage.setAttribute("alt", weatherCondition);
-      console.log(`Set the image and alts to ${weatherCondition}`);
       break;
   }
+
+  summaryImage.setAttribute("class", weatherCondition);
+  summaryImage.setAttribute("alt", weatherCondition);
+  console.log(`Set the image and alts to ${weatherCondition}`);
 };
 
 // Convert meters to feet
@@ -153,7 +148,27 @@ let convertMeters = meters => {
   return Math.floor(meters * 3.28084);
 };
 
+// Get longitude direction
+let getLongitudeDirection = longitude => {
+  if (longitude <= 0) {
+    return "W";
+  } else {
+    return "E";
+  }
+};
+
+// Get latitude direction
+let getLatitudeDirection = latitude => {
+  if (latitude <= 0) {
+    return "S";
+  } else {
+    return "N";
+  }
+};
+
 buildWC(speed, temp);
 windDial(direction);
 changeSummaryImage();
 elevation.innerHTML = convertMeters(elevation.innerHTML);
+longitudeDirection.innerHTML = getLongitudeDirection(longitude.innerHTML);
+latitudeDirection.innerHTML = getLatitudeDirection(latitude.innerHTML);

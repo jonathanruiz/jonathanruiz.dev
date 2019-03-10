@@ -95,6 +95,10 @@ footer {
   margin-bottom: 2.5em;
 }
 
+.hide {
+  display: none;
+}
+
 .tile {
   background-color: rgba(200, 200, 200, 0.6);
   margin: 0.2em auto;
@@ -102,6 +106,10 @@ footer {
   border: 1px solid;
   border-radius: 15px;
   text-align: center;
+}
+
+#main-content {
+  padding-top: 80px;
 }
 
 #site-brand {
@@ -123,7 +131,7 @@ footer {
   color: blue;
 }
 
-#wind li {
+#windContainer li {
   display: block;
 }
 
@@ -299,7 +307,7 @@ footer {
   }
 
   #temps,
-  #wind,
+  #windContainer,
   #summary {
     width: 33%;
   }

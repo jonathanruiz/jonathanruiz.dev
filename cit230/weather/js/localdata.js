@@ -122,9 +122,8 @@ let fetchData = weatherURL => {
         hourlyEl.innerHTML += `<li>${times[i]}: ${
           hourly[i]
         }&deg;F |&nbsp;</li>`;
-
-        console.log(hourlyEl);
       }
+      console.log(hourlyEl);
 
       // Set the zip
       let zipEl = document.getElementById("zip");

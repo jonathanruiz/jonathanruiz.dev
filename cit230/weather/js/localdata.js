@@ -35,6 +35,14 @@ let fetchData = weatherURL => {
       let temp = g.Temp;
       console.log(`Temp is ${temp}`);
 
+      // Get the high
+      let high = g.High;
+      console.log(`High is ${high}`);
+
+      // Get the low
+      let low = g.Low;
+      console.log(`Low is ${low}`);
+
       // Get the wind data
       let wind = g.Wind;
       console.log(`Wind is ${wind}`);
@@ -92,9 +100,20 @@ let fetchData = weatherURL => {
       let tempEl = document.getElementById("temp");
       tempEl.innerHTML = temp;
 
+      // Set the high
+      let highEl = document.getElementById("high");
+      highEl.innerHTML = high;
+
+      // Set the low
+      let lowEl = document.getElementById("low");
+      lowEl.innerHTML = low;
+
       // Set the wind information
       let windEl = document.getElementById("wind");
       windEl.innerHTML = wind;
+
+      // Set the wind chill
+      buildWC(windEl.innerHTML, tempEl.innerHTML);
 
       // Set the current conditions information
       let conditionsEl = document.getElementById("condition");
@@ -102,28 +121,8 @@ let fetchData = weatherURL => {
 
       // Set the hourly temperature information
       let hourlyEl = document.getElementById("hourly-list");
-      hourlyEl.innerHTML = "";
-      for (let i = 0; i < hourly.length; i++) {
-        let times = [
-          "9 AM",
-          "10 AM",
-          "11 AM",
-          "12 PM",
-          "1 PM",
-          "2 PM",
-          "3 PM",
-          "4 PM",
-          "5 PM",
-          "6 PM",
-          "7 PM",
-          "8 PM",
-          "9 PM"
-        ];
-        hourlyEl.innerHTML += `<li>${times[i]}: ${
-          hourly[i]
-        }&deg;F |&nbsp;</li>`;
-      }
-      console.log(hourlyEl);
+      let hourlyList = buildHourlyData(nextHour, hourly);
+      hourlyEl.innerHTML = hourlyList;
 
       // Set the zip
       let zipEl = document.getElementById("zip");
@@ -132,6 +131,7 @@ let fetchData = weatherURL => {
       // Set the wind direction
       let directionEl = document.getElementById("direction");
       directionEl.innerHTML = windDirect;
+      windDial(directionEl.innerHTML);
 
       // Get the gusts
       let gustsEl = document.getElementById("gusts");
@@ -156,8 +156,13 @@ let fetchData = weatherURL => {
     .catch(error => {
       console.log("There was a fetch problem: ", error.message);
       statusContainer.innerHTML = "Sorry, the data could not be processed.";
+    })
+    .then(data => {
+      changeSummaryImage();
+      elevation.innerHTML = convertMeters(elevation.innerHTML);
+      longitudeDirection.innerHTML = getLongitudeDirection(longitude.innerHTML);
+      latitudeDirection.innerHTML = getLatitudeDirection(latitude.innerHTML);
     });
 };
 
-// Calls the fetch API
 fetchData(weatherURL);

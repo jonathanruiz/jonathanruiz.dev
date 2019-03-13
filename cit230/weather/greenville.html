@@ -55,10 +55,10 @@
       <div id="curWeather">
         <section id="temps" class="tile">
           <h2>Temperature</h2>
-          <h3 id="temp">40&deg;F</h3>
+          <h3><span id="temp">40</span>&deg;F</h3>
           <ul>
-            <li id="high">64&deg;F</li>
-            <li id="low">41&deg;F</li>
+            <li><span id="high">??</span>&deg;F</li>
+            <li><span id="low">??</span>&deg;F</li>
           </ul>
           <p>Feels Like <span id="feelTemp">??</span>&deg;F</p>
         </section>
@@ -105,8 +105,7 @@
       Jonathan Ruiz&copy; February 2, 2019, The Weather Site
     </footer>
 
+    <script src="js/functions.js"></script>
     <script src="js/localdata.js"></script>
-    <!-- The async tag makes sure that functions is loaded after localdata.js-->
-    <script async src="js/functions.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
 
 console.log("My javascript is being read.");
 
-const temp = document.getElementById("temp").innerHTML;
+const temperature = document.getElementById("temp").innerHTML;
 const speed = document.getElementById("wind").innerHTML;
 const direction = document.getElementById("direction").innerHTML;
 const summaryImage = document.getElementById("summaryImage");
@@ -15,6 +15,10 @@ const longitude = document.getElementById("longitude");
 const latitude = document.getElementById("latitude");
 const longitudeDirection = document.getElementById("longitude-direction");
 const latitudeDirection = document.getElementById("latitude-direction");
+const hourly = document.getElementById("hourly-list");
+
+let date = new Date();
+let nextHour = date.getHours() + 1;
 
 // Calculate the Windchill
 let buildWC = (speed, temp) => {
@@ -166,9 +170,34 @@ let getLatitudeDirection = latitude => {
   }
 };
 
-buildWC(speed, temp);
-windDial(direction);
-changeSummaryImage();
-elevation.innerHTML = convertMeters(elevation.innerHTML);
-longitudeDirection.innerHTML = getLongitudeDirection(longitude.innerHTML);
-latitudeDirection.innerHTML = getLatitudeDirection(latitude.innerHTML);
+// Convert, Format time to 12 hour format
+let formatTime = hour => {
+  if (hour > 23) {
+    hour -= 24;
+  }
+  let amPM = hour > 11 ? "pm" : "am";
+  if (hour > 12) {
+    hour -= 12;
+  }
+  if (hour == 0) {
+    hour = "12";
+  }
+  return hour + amPM;
+};
+
+let buildHourlyData = (nextHour, hourlyTemps) => {
+  // Data comes from a JavaScript object of hourly temp name - value pairs
+  // Next hour should have a value between 0-23
+  // The hourlyTemps variable holds an array of temperatures
+  // Line 8 builds a list item showing the time for the next hour
+  // and then the first element (value in index 0) from the hourly temps array
+  let hourlyListItems = `<li>${formatTime(nextHour)}: 
+  ${hourlyTemps[0]}&deg;F |&nbsp;</li>`;
+  // Build the remaining list items using a for loop
+  for (let i = 1, x = hourlyTemps.length; i < x; i++) {
+    hourlyListItems += `<li>${formatTime(nextHour + i)}: 
+    ${hourlyTemps[i]}&deg;F |&nbsp;</li>`;
+  }
+  console.log(`HourlyList is: ${hourlyListItems}`);
+  return hourlyListItems;
+};

@@ -154,7 +154,7 @@ let changeSummaryImage = () => {
       break;
   }
 
-  summaryImage.setAttribute("class", weatherCondition);
+  summaryImage.setAttribute("src", storage.getItem("locIcon"));
   summaryImage.setAttribute("alt", weatherCondition);
   console.log(`Set the image and alts to ${weatherCondition}`);
 };

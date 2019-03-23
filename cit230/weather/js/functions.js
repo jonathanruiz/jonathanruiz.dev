@@ -237,10 +237,10 @@ let getWeather = stationId => {
       console.log(data);
 
       // Store weather information to localStorage
-
       // Description
       storage.setItem("locDescription", data.properties.textDescription);
-
+    })
+    .then(() => {
       // Build the page for viewing
       buildPage();
     })

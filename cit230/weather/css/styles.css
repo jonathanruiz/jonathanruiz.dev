@@ -250,7 +250,7 @@ footer {
 /* Larger Devices */
 @media screen and (min-width: 425px) {
   #summary img {
-    max-width: 400px;
+    max-width: 250px;
   }
 }
 

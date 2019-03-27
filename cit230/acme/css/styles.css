@@ -1,0 +1,44 @@
+body {
+  background-image: url("../images/site/background.jpg");
+}
+
+#site-page {
+  background-color: #ffffff;
+  margin: 10px;
+}
+
+#page-header {
+}
+
+#page-nav {
+  background-color: #de2226;
+  padding: 10px 0;
+}
+
+#nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+}
+
+#nav-list li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#nav-list a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#page-content {
+}
+
+#page-footer {
+  text-align: center;
+}
+
+#page-footer p {
+  margin: 0;
+}

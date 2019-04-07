@@ -1,4 +1,5 @@
 const pageContent = document.getElementById("page-content");
+const originalTitle = document.title;
 const original = pageContent.innerHTML;
 
 // Fetch the data from the API
@@ -47,12 +48,16 @@ let buildNav = (data, keys) => {
 
 // Build the home page
 let buildHome = () => {
-  pageContent.innerHTML = original;
+  document.title = originalTitle; // Change to orignal page title
+  pageContent.innerHTML = original; // Change to original page content
 };
 
 // Build the nav pages
 let buildPage = data => {
   console.log(data);
+
+  // Change page title
+  document.title = `${data.name} | ACME, Inc`;
 
   // Populate the HTML with the object info
   pageContent.innerHTML = `

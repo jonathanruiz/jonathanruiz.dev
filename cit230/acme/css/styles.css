@@ -2,7 +2,7 @@ body {
   background-image: url("../images/site/background.jpg");
   background-size: cover;
   font-family: "Roboto", sans-serif;
-  margin: 0;
+  margin: 0 0 30px 0;
 }
 
 #site-page {

@@ -1,11 +1,13 @@
 body {
   background-image: url("../images/site/background.jpg");
   background-size: cover;
+  font-family: "Roboto", sans-serif;
 }
 
 #site-page {
   background-color: #ffffff;
-  margin: 10px;
+  margin: 10px auto;
+  max-width: 1080px;
 }
 
 #page-nav {
@@ -52,7 +54,7 @@ body {
 
 .featured {
   list-style: none;
-  font-size: 10px;
+  font-size: 2.5vw;
   position: absolute;
   top: 0;
   right: 20px;
@@ -60,7 +62,7 @@ body {
 }
 
 #actionbtn {
-  width: 100px;
+  width: 30vw;
 }
 
 .food-recipes {
@@ -81,6 +83,15 @@ body {
   padding: 0 30px;
 }
 
+.product-img img {
+  width: 100%;
+}
+
+.product-info h3 {
+  font-size: 40px;
+  color: #f00;
+}
+
 /* Small Screen */
 @media screen and (max-width: 420px) {
   #page-header img {
@@ -93,17 +104,45 @@ body {
 }
 
 @media screen and (min-width: 520px) {
-  .featured {
-    font-size: 16px;
-  }
 }
 
 @media screen and (min-width: 600px) {
-  .featured {
-    font-size: 20px;
-  }
-
   #content {
     display: flex;
+  }
+
+  .recipes {
+    order: -1;
+  }
+
+  .products {
+    display: flex;
+  }
+
+  .product-img {
+    width: 50%;
+    text-align: center;
+  }
+
+  .product-img img {
+    width: unset;
+  }
+
+  .product-info {
+    width: 50%;
+  }
+
+  .product-info p {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #nav-list {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 35px;
   }
 }

@@ -57,11 +57,17 @@ let buildPage = data => {
   // Populate the HTML with the object info
   pageContent.innerHTML = `
     <h2>${data.name}</h2>
-    <img src="${data.path}" alt="${data.name}"></img>
-    <p>${data.description}</p>
-    <p><strong>Made by:</strong> ${data.manufacturer}</p>
-    <p><strong>Reviews:</strong> ${data.reviews}/5 stars</p>
-    <h3>$${data.price}</h3>
+    <section class="products">
+      <div class="product-img">
+        <img src="${data.path}" alt="${data.name}"></img>
+      </div>
+      <div class="product-info">
+        <p>${data.description}</p>
+        <p><strong>Made by:</strong> ${data.manufacturer}</p>
+        <p><strong>Reviews:</strong> ${data.reviews}/5 stars</p>
+        <h3>Price: $${data.price}</h3>
+      </div>
+    </section>
   `;
 };
 

@@ -2,11 +2,12 @@ body {
   background-image: url("../images/site/background.jpg");
   background-size: cover;
   font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
 #site-page {
   background-color: #ffffff;
-  margin: 10px auto;
+  margin: auto;
   max-width: 1080px;
 }
 

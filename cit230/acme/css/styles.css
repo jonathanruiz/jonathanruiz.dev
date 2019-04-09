@@ -52,7 +52,7 @@ body {
 
 .featured {
   list-style: none;
-  font-size: 2.5vw;
+  font-size: 2vw;
   position: absolute;
   top: 0;
   right: 20px;
@@ -97,6 +97,10 @@ body {
   }
 
   #page-nav {
+    font-size: 10px;
+  }
+
+  .featured {
     font-size: 10px;
   }
 }

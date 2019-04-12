@@ -7,7 +7,6 @@ import styled from "styled-components"
 const Container = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  margin-bottom: 1.45rem;
 `
 
 const Inner = styled.div`
@@ -17,6 +16,8 @@ const Inner = styled.div`
   margin: 0 auto;
   max-width: 960px;
   padding: 1.45rem 1.0875rem;
+  position: absolute;
+  z-index: 1;
 `
 
 const Heading = styled.h1`
@@ -41,7 +42,7 @@ const NavLink = styled.a`
   text-decoration: none;
 `
 
-// Heading
+// Header
 const Header = ({ siteTitle }) => (
   <Container>
     <Inner>

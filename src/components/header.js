@@ -29,17 +29,14 @@ const HeadingLink = styled(Link)`
   text-decoration: none;
 `
 
-const List = styled.ul`
+const Nav = styled.nav`
   display: flex;
   margin: 0;
   list-style: none;
 `
 
-const ListItem = styled.li`
+const NavLink = styled.a`
   padding: 1em;
-`
-
-const ItemLink = styled.a`
   color: rebeccapurple;
   text-decoration: none;
 `
@@ -51,17 +48,11 @@ const Header = ({ siteTitle }) => (
       <Heading>
         <HeadingLink to="/">{siteTitle}</HeadingLink>
       </Heading>
-      <List>
-        <ListItem>
-          <ItemLink href="#">About</ItemLink>
-        </ListItem>
-        <ListItem>
-          <ItemLink href="#">Projects</ItemLink>
-        </ListItem>
-        <ListItem>
-          <ItemLink href="#">Contact</ItemLink>
-        </ListItem>
-      </List>
+      <Nav>
+        <NavLink href="#">About</NavLink>
+        <NavLink href="#">Projects</NavLink>
+        <NavLink href="#">Contact</NavLink>
+      </Nav>
     </Inner>
   </Container>
 )

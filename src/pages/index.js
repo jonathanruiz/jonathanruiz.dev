@@ -1,18 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
-import { Image } from "../components/image"
+import { Profile } from "../components/image"
 import SEO from "../components/seo"
+
+const ProfileImage = styled(Profile)`
+  width: 200px;
+`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
+    <SEO
+      title="Home"
+      keywords={[`Jonathan Ruiz`, `portfolio`, `web developer`]}
+    />
+    <h1>About Me</h1>
+    <p>
+      I usually go by Johnny! I am a Front-End Developer from Miami, Florida and
+      am currently attending Brigham Young University - Idaho.
+    </p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+      <ProfileImage />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>

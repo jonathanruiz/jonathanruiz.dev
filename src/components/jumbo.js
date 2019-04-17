@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticQuery, graphql } from "gatsby"
-import { Profile } from "./image"
 import BackgroundImage from "gatsby-background-image"
 import Typed from "react-typed"
 import styled from "styled-components"
@@ -41,15 +40,13 @@ const HeadingLink = styled(Link)`
 
 const Hero = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: 960px;
   text-align: center;
-  padding: 1.45rem 1.0875rem;
-`
-
-const ProfileImage = styled(Profile)`
-  width: 200px;
+  height: 100vh;
+  // margin: 0 auto;
+  // max-width: 960px;
+  // padding: 1.45rem 1.0875rem;
 `
 
 const TypedText = styled(Typed)`
@@ -84,13 +81,12 @@ const JumboHead = ({ siteTitle, className }) => (
             style={{ height: "100vh" }}
           >
             <Container>
-              <Inner>
+              {/* <Inner>
                 <Heading>
                   <HeadingLink to="/">{siteTitle}</HeadingLink>
                 </Heading>
-              </Inner>
+              </Inner> */}
               <Hero>
-                <ProfileImage />
                 <TypedText
                   strings={["Hi, my name is Jonathan Ruiz"]}
                   typeSpeed={30}

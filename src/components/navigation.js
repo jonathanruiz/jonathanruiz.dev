@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -18,20 +19,25 @@ const Nav = styled.nav`
   list-style: none;
 `
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   padding: 1em;
   color: rebeccapurple;
   font-weight: bold;
   text-decoration: none;
 `
 
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 const Navigation = () => (
   <Container>
     <Inner>
       <Nav>
-        <NavLink href="#">About</NavLink>
-        <NavLink href="#">Projects</NavLink>
-        <NavLink href="#">Contact</NavLink>
+        <NavLink to="/#about">About</NavLink>
+        <NavLink to="/#projects">Projects</NavLink>
+        <NavLink to="/#contact">Contact</NavLink>
       </Nav>
     </Inner>
   </Container>

@@ -44,9 +44,6 @@ const Hero = styled.div`
   flex-direction: column;
   text-align: center;
   height: 70vh;
-  // margin: 0 auto;
-  // max-width: 960px;
-  // padding: 1.45rem 1.0875rem;
 `
 
 const TypedText = styled(Typed)`

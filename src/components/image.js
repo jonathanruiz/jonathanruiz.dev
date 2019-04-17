@@ -16,12 +16,8 @@ import styled from "styled-components"
 
 const StyledImg = styled(Img)`
   border-radius: 50%;
-  width: 300px;
-  margin: 0 auto;
-
-  @media (max-width: 700px) {
-    width: 150px;
-  }
+  width: 150px;
+  // margin: 0 auto;
 `
 
 export const Profile = () => (

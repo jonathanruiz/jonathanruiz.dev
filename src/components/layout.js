@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Jumbo from "./jumbo"
 import "./layout.scss"
-import Navagation from "./navagation"
+import Navigation from "./navigation"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Jumbo siteTitle={data.site.siteMetadata.title} />
-        <Navagation />
+        <Navigation />
         <div
           style={{
             margin: `0 auto`,

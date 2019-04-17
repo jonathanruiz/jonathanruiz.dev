@@ -43,16 +43,24 @@ const Hero = styled.div`
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
+  height: 70vh;
   // margin: 0 auto;
   // max-width: 960px;
   // padding: 1.45rem 1.0875rem;
 `
 
 const TypedText = styled(Typed)`
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   line-height: 1;
+
+  @media (min-width: 480px) {
+    font-size: 45px;
+  }
+
+  @media (min-width: 700px) {
+    font-size: 60px;
+  }
 `
 
 const JumboHead = ({ siteTitle, className }) => (
@@ -81,11 +89,11 @@ const JumboHead = ({ siteTitle, className }) => (
             style={{ height: "100vh" }}
           >
             <Container>
-              {/* <Inner>
+              <Inner>
                 <Heading>
                   <HeadingLink to="/">{siteTitle}</HeadingLink>
                 </Heading>
-              </Inner> */}
+              </Inner>
               <Hero>
                 <TypedText
                   strings={["Hi, my name is Jonathan Ruiz"]}

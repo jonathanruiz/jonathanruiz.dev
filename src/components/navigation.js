@@ -25,7 +25,7 @@ const NavLink = styled.a`
   text-decoration: none;
 `
 
-const Navagation = () => (
+const Navigation = () => (
   <Container>
     <Inner>
       <Nav>
@@ -37,4 +37,4 @@ const Navagation = () => (
   </Container>
 )
 
-export default Navagation
+export default Navigation

@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Jumbo from "./jumbo"
 import "./layout.scss"
+import Navagation from "./navagation"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,7 +26,8 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Jumbo siteTitle={data.site.siteMetadata.title} />
+        <Navagation />
         <div
           style={{
             margin: `0 auto`,

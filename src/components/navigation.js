@@ -28,7 +28,7 @@ const NavLink = styled(Link)`
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
-  require("smooth-scroll")('a[href*="#"]')
+  require("smooth-scroll")('a[href*="#"]', { speed: 1500 })
 }
 
 const Navigation = () => (

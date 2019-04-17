@@ -53,6 +53,8 @@ const IndexPage = () => (
           great time can be defined as going out to the outdoors and go hiking.
         </p>
       </Info>
+      <h2>Skills</h2>
+      <h2>Certification</h2>
     </section>
     <section id="projects">
       <Heading>Projects</Heading>

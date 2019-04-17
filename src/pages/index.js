@@ -21,7 +21,6 @@ const IndexPage = () => (
       I usually go by Johnny! I am a Front-End Developer from Miami, Florida and
       am currently attending Brigham Young University - Idaho.
     </p>
-    <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <ProfileImage />
     </div>

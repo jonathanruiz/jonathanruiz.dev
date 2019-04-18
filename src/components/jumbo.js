@@ -34,7 +34,7 @@ const Heading = styled.h1`
 `
 
 const HeadingLink = styled(Link)`
-  color: rebeccapurple;
+  color: #08497c;
   text-decoration: none;
 `
 

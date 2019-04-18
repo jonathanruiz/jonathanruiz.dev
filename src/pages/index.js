@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import "devicon"
+import Gatsby from "../images/icons/gatsbyjs-icon.svg"
 
 import Layout from "../components/layout"
 import { Profile } from "../components/image"
@@ -33,11 +35,41 @@ const ProfileImage = styled(Profile)`
   width: 200px;
 `
 
+const Skills = styled.div`
+  @media (min-width: 700px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "lt do";
+  }
+`
+
+const LangTech = styled.div`
+  grid-area: lt;
+`
+
+const DevOther = styled.div`
+  grid-area: do;
+`
+
+const Items = styled.ul`
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 0;
+  list-style: none;
+`
+
+const SkillItem = styled.li`
+  font-size: 60px;
+  margin: 10px;
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO
       title="Home"
-      keywords={[`Jonathan Ruiz`, `portfolio`, `web developer`]}
+      keywords={[`Jonathan Ruiz`, `portfolio`, `web developer`, `react`]}
     />
     <section id="about">
       <Heading>About Me</Heading>
@@ -49,11 +81,77 @@ const IndexPage = () => (
           But you can call me Johnny! I am a Front-End Developer from Miami,
           Florida and am currently attending Brigham Young University - Idaho. I
           have recently found a passion for cooking and constantly look for new
-          things to make (so shoot me an email if you have something tasty). A
-          great time can be defined as going out to the outdoors and go hiking.
+          things to make (so shoot me an email if you have a tasty recipe). I
+          love the outdoors! Anything from hiking to white water rafting
+          (although I have only done it once) to canoeing.
         </p>
       </Info>
+
       <h2>Skills</h2>
+      <Skills>
+        <LangTech>
+          <h3>Languages/Technologies</h3>
+          <Items>
+            <SkillItem>
+              <i className="devicon-html5-plain colored" />
+            </SkillItem>
+            <SkillItem>
+              <i className="devicon-css3-plain colored" />
+            </SkillItem>
+            <SkillItem>
+              <i className="devicon-javascript-plain colored" />
+            </SkillItem>
+            <SkillItem>
+              <i className="devicon-sass-original colored" />
+            </SkillItem>
+            <SkillItem>
+              <i className="devicon-react-original colored" />
+            </SkillItem>
+            <SkillItem>
+              <img src={Gatsby} alt="gatsby" />
+            </SkillItem>
+            <SkillItem>
+              <i className="devicon-cplusplus-line colored" />
+            </SkillItem>
+            <SkillItem>
+              <i className="devicon-express-original colored" />
+            </SkillItem>
+            <SkillItem>
+              <i className="devicon-mongodb-plain colored" />
+            </SkillItem>
+            <SkillItem>
+              <i className="devicon-nodejs-plain colored" />
+            </SkillItem>
+          </Items>
+        </LangTech>
+        <DevOther>
+          <h3>Dev Tool/Other</h3>
+          <Items>
+            <SkillItem>
+              <i class="devicon-git-plain colored" />
+            </SkillItem>
+            <SkillItem>
+              <i class="devicon-github-plain colored" />
+            </SkillItem>
+            <SkillItem>
+              <i class="devicon-grunt-line colored" />
+            </SkillItem>
+            <SkillItem>
+              <i class="devicon-gulp-plain colored" />
+            </SkillItem>
+            <SkillItem>
+              <i class="devicon-visualstudio-plain colored" />
+            </SkillItem>
+            <SkillItem>
+              <i class="devicon-photoshop-plain colored" />
+            </SkillItem>
+            <SkillItem>
+              <i class="devicon-slack-plain colored" />
+            </SkillItem>
+          </Items>
+        </DevOther>
+      </Skills>
+
       <h2>Certification</h2>
     </section>
     <section id="projects">

@@ -21,7 +21,7 @@ const Nav = styled.nav`
 
 const NavLink = styled(Link)`
   padding: 1em;
-  color: rebeccapurple;
+  color: #08497c;
   font-weight: bold;
   text-decoration: none;
 `

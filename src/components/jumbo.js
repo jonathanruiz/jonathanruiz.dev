@@ -46,7 +46,7 @@ const Hero = styled.div`
   height: 70vh;
 `
 
-const TypedText = styled(Typed)`
+const MainTyped = styled(Typed)`
   font-size: 30px;
   font-weight: bold;
   line-height: 1;
@@ -57,6 +57,18 @@ const TypedText = styled(Typed)`
 
   @media (min-width: 700px) {
     font-size: 60px;
+  }
+`
+
+const SubTyped = styled(Typed)`
+  line-height: 1;
+
+  @media (min-width: 480px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 700px) {
+    font-size: 30px;
   }
 `
 
@@ -92,11 +104,11 @@ const JumboHead = ({ siteTitle, className }) => (
                 </Heading>
               </Inner>
               <Hero>
-                <TypedText
+                <MainTyped
                   strings={["Hi, my name is Jonathan Ruiz"]}
                   typeSpeed={30}
                 />
-                <Typed
+                <SubTyped
                   strings={[
                     "I love to hike.",
                     "I love to cook.",

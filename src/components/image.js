@@ -17,7 +17,6 @@ import styled from "styled-components"
 const StyledImg = styled(Img)`
   border-radius: 50%;
   width: 150px;
-  // margin: 0 auto;
 `
 
 export const Profile = () => (

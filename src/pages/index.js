@@ -13,6 +13,9 @@ import TestOut from "../components/images/testout"
 import MTA from "../components/images/mta"
 import CIW from "../components/images/ciw"
 
+import TestOutCert from "../pdf/testout-cert.pdf"
+import CIWCert from "../pdf/ciw-cert.pdf"
+
 const Sections = styled.section`
   margin-bottom: 20px;
 `
@@ -118,6 +121,7 @@ const CertContent = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0;
+  margin-bottom: 10px;
 
   @media (min-width: 700px) {
     flex-direction: row;
@@ -134,6 +138,10 @@ const CertText = styled.p`
     margin-left: 20px;
     margin-bottom: 0;
   }
+`
+
+const CertLink = styled.h4`
+  margin-left: 20px;
 `
 
 const GatsbyImage = styled.img`
@@ -164,14 +172,22 @@ const IndexPage = () => (
         <ImageContainer>
           <ProfileImage />
         </ImageContainer>
-        <p>
-          But you can call me Johnny! I am a Front-End Developer from Miami,
-          Florida and am currently attending Brigham Young University - Idaho. I
-          have recently found a passion for cooking and constantly look for new
-          things to make (so shoot me an email if you have a tasty recipe). I
-          love the outdoors! Anything from hiking to white water rafting
-          (although I have only done it once) to canoeing.
-        </p>
+        <div>
+          <p>
+            But you can call me Johnny! I am a Front-End Developer from Miami,
+            Florida and am currently attending Brigham Young University - Idaho.
+            I have recently found a passion for cooking and constantly look for
+            new food to make (so shoot me an email if you have a tasty recipe).
+            I love the outdoors! Anything from hiking to white water rafting
+            (although I have only done it once) to canoeing.
+          </p>
+          <p>
+            From a young age, I was facinated by computers and was determined to
+            learn how to create apps. From then I have worked on molding myself
+            to become a Front-End Developer and currently working learning to do
+            things as a Full-Stack Developer.
+          </p>
+        </div>
       </Info>
 
       <SubHeading>Skills</SubHeading>
@@ -263,56 +279,79 @@ const IndexPage = () => (
           <h4>Udacity</h4>
           <CertContent>
             <CertText>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              culpa qui beatae. Ipsum distinctio voluptate doloremque minima
-              atque dicta, sint quasi harum temporibus odio quaerat? Illum sequi
-              eius quis quos! Molestiae veniam quas optio illum laboriosam
-              soluta minus nobis eius.
+              On January 2018, I was awarded the Grow with Google Scholarship
+              and graduated from Udacity's Nanodegree program that is in
+              collaboration with Google. I worked on projects that taught me
+              anything from accesibility, flexbox and implementing Javascript on
+              web pages to things like React, Angular, asynchronous fetch
+              requests and Service Workers. I've cherished the things I have
+              learned and has guided me to be a better developer and problem
+              solver.
             </CertText>
             <Udacity />
           </CertContent>
+          <CertLink>
+            <a href={"https://graduation.udacity.com/confirm/WLGWHCV5"}>
+              See Credential
+            </a>
+          </CertLink>
         </CertificationItem>
         <CertificationItem>
           <CertHeading>Switching Pro Certification</CertHeading>
           <h4>TestOut</h4>
           <CertContent>
             <CertText>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              culpa qui beatae. Ipsum distinctio voluptate doloremque minima
-              atque dicta, sint quasi harum temporibus odio quaerat? Illum sequi
-              eius quis quos! Molestiae veniam quas optio illum laboriosam
-              soluta minus nobis eius.
+              Although it is not very related to web development, I was able to
+              learn how devices communicate with each other and how to use the
+              command line to configure Cisco switching devices. Definitely one
+              of the hardest courses I have ever taken but rewarding.
             </CertText>
             <TestOut />
           </CertContent>
+          <CertLink>
+            <a href={TestOutCert}>See Credential</a>
+          </CertLink>
         </CertificationItem>
         <CertificationItem>
           <CertHeading>MTA: Security Fundamentals</CertHeading>
           <h4>Microsoft</h4>
           <CertContent>
             <CertText>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              culpa qui beatae. Ipsum distinctio voluptate doloremque minima
-              atque dicta, sint quasi harum temporibus odio quaerat? Illum sequi
-              eius quis quos! Molestiae veniam quas optio illum laboriosam
-              soluta minus nobis eius.
+              This Information Security certification by Microsoft taught me how
+              to make sure that devices are safe and secure. I learned about
+              physical, Internet and wireless security; how protect yourself
+              from malware, why is encryption important and how it can protect
+              data and how to make wireless connections secure. Although
+              programming is my passion, I love to learn about computers in
+              general and have pursued further understanding. I am also working
+              on taking the CompTIA Security+ exam soon.
             </CertText>
             <MTA />
           </CertContent>
+          <CertLink>
+            <a href="https://www.youracclaim.com/badges/b6947e68-81f9-44d8-84a9-ad982f4fefa3/linked_in_profile">
+              See Credential
+            </a>
+          </CertLink>
         </CertificationItem>
         <CertificationItem>
           <CertHeading>CIW Network Technology Associate</CertHeading>
           <h4>CIW</h4>
           <CertContent>
             <CertText>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              culpa qui beatae. Ipsum distinctio voluptate doloremque minima
-              atque dicta, sint quasi harum temporibus odio quaerat? Illum sequi
-              eius quis quos! Molestiae veniam quas optio illum laboriosam
-              soluta minus nobis eius.
+              In High School, I took this entry level certificaiton. It did set
+              a foundation for some of the things I would learn later in the
+              future. I learn the fundementals of networking, Internet protocols
+              and network security, which believe that a web developer should
+              know since we build sites and apps that are on the Internet. But
+              from the very beginning I have alwasys been interested in tech and
+              it has led to my deveotion for coding.
             </CertText>
             <CIW />
           </CertContent>
+          <CertLink>
+            <a href={CIWCert}>See Credential</a>
+          </CertLink>
         </CertificationItem>
       </Certification>
     </Sections>
@@ -321,7 +360,7 @@ const IndexPage = () => (
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
         magni ducimus voluptatem, cum ad minus nobis iusto libero itaque
-        asperiores. Facilis repellendus ipsa amet ratione unde, praesentium
+        asperiores. Facilis repellendusb ipsa amet ratione unde, praesentium
         voluptate assumenda repellat vitae voluptatibus possimus animi labore
         beatae expedita neque quo nam enim nobis necessitatibus aliquid id ipsam
         dicta magnam.

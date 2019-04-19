@@ -183,9 +183,11 @@ const IndexPage = () => (
           </p>
           <p>
             From a young age, I was facinated by computers and was determined to
-            learn how to create apps. From then I have worked on molding myself
-            to become a Front-End Developer and currently working learning to do
-            things as a Full-Stack Developer.
+            learn how to create apps. Two years ago, I learned how Javascript
+            can be used to not only make websites but mobile and desktop apps
+            and back-ends. From then I have worked on molding myself to become a
+            Front-End Developer and currently working learning to do things as a
+            Full-Stack Developer.
           </p>
         </div>
       </Info>
@@ -291,7 +293,10 @@ const IndexPage = () => (
             <Udacity />
           </CertContent>
           <CertLink>
-            <a href={"https://graduation.udacity.com/confirm/WLGWHCV5"}>
+            <a
+              href={"https://graduation.udacity.com/confirm/WLGWHCV5"}
+              target="_blank"
+            >
               See Credential
             </a>
           </CertLink>
@@ -309,7 +314,9 @@ const IndexPage = () => (
             <TestOut />
           </CertContent>
           <CertLink>
-            <a href={TestOutCert}>See Credential</a>
+            <a href={TestOutCert} target="_blank">
+              See Credential
+            </a>
           </CertLink>
         </CertificationItem>
         <CertificationItem>
@@ -329,7 +336,10 @@ const IndexPage = () => (
             <MTA />
           </CertContent>
           <CertLink>
-            <a href="https://www.youracclaim.com/badges/b6947e68-81f9-44d8-84a9-ad982f4fefa3/linked_in_profile">
+            <a
+              href="https://www.youracclaim.com/badges/b6947e68-81f9-44d8-84a9-ad982f4fefa3/linked_in_profile"
+              target="_blank"
+            >
               See Credential
             </a>
           </CertLink>
@@ -350,7 +360,9 @@ const IndexPage = () => (
             <CIW />
           </CertContent>
           <CertLink>
-            <a href={CIWCert}>See Credential</a>
+            <a href={CIWCert} target="_blank">
+              See Credential
+            </a>
           </CertLink>
         </CertificationItem>
       </Certification>

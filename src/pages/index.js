@@ -296,6 +296,7 @@ const IndexPage = () => (
             <a
               href={"https://graduation.udacity.com/confirm/WLGWHCV5"}
               target="_blank"
+              rel="noopener noreferrer"
             >
               See Credential
             </a>
@@ -314,7 +315,7 @@ const IndexPage = () => (
             <TestOut />
           </CertContent>
           <CertLink>
-            <a href={TestOutCert} target="_blank">
+            <a href={TestOutCert} target="_blank" rel="noopener noreferrer">
               See Credential
             </a>
           </CertLink>
@@ -339,6 +340,7 @@ const IndexPage = () => (
             <a
               href="https://www.youracclaim.com/badges/b6947e68-81f9-44d8-84a9-ad982f4fefa3/linked_in_profile"
               target="_blank"
+              rel="noopener noreferrer"
             >
               See Credential
             </a>
@@ -360,7 +362,7 @@ const IndexPage = () => (
             <CIW />
           </CertContent>
           <CertLink>
-            <a href={CIWCert} target="_blank">
+            <a href={CIWCert} target="_blank" rel="noopener noreferrer">
               See Credential
             </a>
           </CertLink>

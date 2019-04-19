@@ -2,11 +2,16 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import "devicon"
-import Gatsby from "../images/icons/gatsbyjs-icon.svg"
+import Gatsby from "../images/gatsbyjs-icon.svg"
 
 import Layout from "../components/layout"
-import { Profile } from "../components/image"
 import SEO from "../components/seo"
+
+import Profile from "../components/images/profile"
+import Udacity from "../components/images/udacity"
+import TestOut from "../components/images/testout"
+import MTA from "../components/images/mta"
+import CIW from "../components/images/ciw"
 
 const Sections = styled.section`
   margin-bottom: 20px;
@@ -91,6 +96,43 @@ const SkillText = styled.p`
 
   @media (min-width: 800px) {
     font-size: 16px;
+  }
+`
+
+const Certification = styled.div``
+
+const CertificationItem = styled.div`
+  margin: 10px 0;
+  padding: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+`
+
+const CertHeading = styled.h3`
+  margin: 5px 0;
+`
+
+const CertContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+`
+
+const CertText = styled.p`
+  order: 1;
+
+  @media (min-width: 700px) {
+    order: 0;
+    width: 75%;
+    margin-left: 20px;
+    margin-bottom: 0;
   }
 `
 
@@ -215,6 +257,64 @@ const IndexPage = () => (
       </Skills>
 
       <SubHeading>Certifications</SubHeading>
+      <Certification>
+        <CertificationItem>
+          <CertHeading>Front End Web Nanodegree</CertHeading>
+          <h4>Udacity</h4>
+          <CertContent>
+            <CertText>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              culpa qui beatae. Ipsum distinctio voluptate doloremque minima
+              atque dicta, sint quasi harum temporibus odio quaerat? Illum sequi
+              eius quis quos! Molestiae veniam quas optio illum laboriosam
+              soluta minus nobis eius.
+            </CertText>
+            <Udacity />
+          </CertContent>
+        </CertificationItem>
+        <CertificationItem>
+          <CertHeading>Switching Pro Certification</CertHeading>
+          <h4>TestOut</h4>
+          <CertContent>
+            <CertText>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              culpa qui beatae. Ipsum distinctio voluptate doloremque minima
+              atque dicta, sint quasi harum temporibus odio quaerat? Illum sequi
+              eius quis quos! Molestiae veniam quas optio illum laboriosam
+              soluta minus nobis eius.
+            </CertText>
+            <TestOut />
+          </CertContent>
+        </CertificationItem>
+        <CertificationItem>
+          <CertHeading>MTA: Security Fundamentals</CertHeading>
+          <h4>Microsoft</h4>
+          <CertContent>
+            <CertText>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              culpa qui beatae. Ipsum distinctio voluptate doloremque minima
+              atque dicta, sint quasi harum temporibus odio quaerat? Illum sequi
+              eius quis quos! Molestiae veniam quas optio illum laboriosam
+              soluta minus nobis eius.
+            </CertText>
+            <MTA />
+          </CertContent>
+        </CertificationItem>
+        <CertificationItem>
+          <CertHeading>CIW Network Technology Associate</CertHeading>
+          <h4>CIW</h4>
+          <CertContent>
+            <CertText>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              culpa qui beatae. Ipsum distinctio voluptate doloremque minima
+              atque dicta, sint quasi harum temporibus odio quaerat? Illum sequi
+              eius quis quos! Molestiae veniam quas optio illum laboriosam
+              soluta minus nobis eius.
+            </CertText>
+            <CIW />
+          </CertContent>
+        </CertificationItem>
+      </Certification>
     </Sections>
     <Sections id="projects">
       <Heading>Projects</Heading>

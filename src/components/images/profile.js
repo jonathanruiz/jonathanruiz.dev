@@ -19,7 +19,7 @@ const StyledImg = styled(Img)`
   width: 150px;
 `
 
-export const Profile = () => (
+const Profile = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -37,3 +37,5 @@ export const Profile = () => (
     )}
   />
 )
+
+export default Profile

@@ -12,20 +12,23 @@ import Udacity from "../components/images/udacity"
 import TestOut from "../components/images/testout"
 import MTA from "../components/images/mta"
 import CIW from "../components/images/ciw"
+import Comnets from "../components/images/comnets"
+import UnsacredGrove from "../components/images/unsacredgrove"
+import NeighborhoodMap from "../components/images/neighborhood"
 
 import TestOutCert from "../pdf/testout-cert.pdf"
 import CIWCert from "../pdf/ciw-cert.pdf"
 
 const Sections = styled.section`
   margin-bottom: 20px;
-`
 
-const Heading = styled.h1`
-  text-align: center;
-`
+  h1 {
+    text-align: center;
+  }
 
-const SubHeading = styled.h2`
-  margin-top: 20px;
+  h2 {
+    margin-top: 20px;
+  }
 `
 
 const Info = styled.div`
@@ -76,29 +79,34 @@ const Items = styled.ul`
   justify-content: center;
   margin: 0;
   list-style: none;
-`
 
-const SkillItem = styled.li`
-  font-size: 60px;
-  margin: 10px;
+  li {
+    font-size: 60px;
+    margin: 10px;
+  }
+
+  p {
+    font-size: 10px;
+  }
 
   @media (min-width: 600px) {
-    font-size: 70px;
+    li {
+      font-size: 70px;
+    }
+
+    p {
+      font-size: 12px;
+    }
   }
 
   @media (min-width: 800px) {
-    font-size: 90px;
-  }
-`
-const SkillText = styled.p`
-  font-size: 10px;
+    li {
+      font-size: 90px;
+    }
 
-  @media (min-width: 600px) {
-    font-size: 12px;
-  }
-
-  @media (min-width: 800px) {
-    font-size: 16px;
+    p {
+      font-size: 16px;
+    }
   }
 `
 
@@ -110,10 +118,10 @@ const CertificationItem = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px;
-`
 
-const CertHeading = styled.h3`
-  margin: 5px 0;
+  h3 {
+    margin: 5px 0;
+  }
 `
 
 const CertContent = styled.div`
@@ -123,25 +131,29 @@ const CertContent = styled.div`
   margin: 0;
   margin-bottom: 10px;
 
+  p {
+    order: 1;
+  }
+
   @media (min-width: 700px) {
     flex-direction: row;
     justify-content: space-evenly;
-  }
-`
 
-const CertText = styled.p`
-  order: 1;
-
-  @media (min-width: 700px) {
-    order: 0;
-    width: 75%;
-    margin-left: 20px;
-    margin-bottom: 0;
+    p {
+      order: 0;
+      width: 75%;
+      margin-left: 20px;
+      margin-bottom: 0;
+    }
   }
 `
 
 const CertLink = styled.h4`
   margin-left: 20px;
+
+  a {
+    color: #048484;
+  }
 `
 
 const GatsbyImage = styled.img`
@@ -160,6 +172,55 @@ const GatsbyImage = styled.img`
   }
 `
 
+const Projects = styled.div`
+  @media (min-width: 800px) {
+    display: flex;
+    justify-content: center;
+  }
+`
+
+const ProjectItem = styled.div`
+  margin: 10px;
+  padding: 16px;
+  border-radius: 5px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+
+  h3 {
+    // margin: 0;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  @media (min-width: 800px) {
+    width: 33%;
+  }
+`
+
+const ProjectContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 10px;
+
+  ul {
+    display: flex;
+    flex-flow: wrap;
+    list-style: none;
+    margin: 0;
+
+    li {
+      padding: 5px;
+      margin: 5px;
+      border: 1px solid;
+      border-radius: 5px;
+      color: #fff;
+      background-color: #048484;
+    }
+  }
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO
@@ -167,7 +228,7 @@ const IndexPage = () => (
       keywords={[`Jonathan Ruiz`, `portfolio`, `web developer`, `react`]}
     />
     <Sections id="about">
-      <Heading>About Me</Heading>
+      <h1>About Me</h1>
       <Info>
         <ImageContainer>
           <ProfileImage />
@@ -192,95 +253,95 @@ const IndexPage = () => (
         </div>
       </Info>
 
-      <SubHeading>Skills</SubHeading>
+      <h2>Skills</h2>
       <Skills>
         <LangTech>
           <h3>Languages/Technologies</h3>
           <Items>
-            <SkillItem>
+            <li>
               <i className="devicon-html5-plain colored" />
-              <SkillText>HTML5</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>HTML5</p>
+            </li>
+            <li>
               <i className="devicon-css3-plain colored" />
-              <SkillText>CSS3</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>CSS3</p>
+            </li>
+            <li>
               <i className="devicon-sass-original colored" />
-              <SkillText>Sass</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>Sass</p>
+            </li>
+            <li>
               <i className="devicon-javascript-plain colored" />
-              <SkillText>Javascript</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>Javascript</p>
+            </li>
+            <li>
               <i className="devicon-react-original colored" />
-              <SkillText>React.js</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>React.js</p>
+            </li>
+            <li>
               <GatsbyImage src={Gatsby} alt="Gatsby" />
-              <SkillText>Gatsby.js</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>Gatsby.js</p>
+            </li>
+            <li>
               <i className="devicon-nodejs-plain colored" />
-              <SkillText>Node.js</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>Node.js</p>
+            </li>
+            <li>
               <i className="devicon-express-original colored" />
-              <SkillText>Express.js</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>Express.js</p>
+            </li>
+            <li>
               <i className="devicon-mongodb-plain colored" />
-              <SkillText>MongoDB</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>MongoDB</p>
+            </li>
+            <li>
               <i className="devicon-cplusplus-line colored" />
-              <SkillText>C++</SkillText>
-            </SkillItem>
+              <p>C++</p>
+            </li>
           </Items>
         </LangTech>
         <DevOther>
           <h3>Dev Tool/Other</h3>
           <Items>
-            <SkillItem>
+            <li>
               <i className="devicon-visualstudio-plain colored" />
-              <SkillText>VS Code</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>VS Code</p>
+            </li>
+            <li>
               <i className="devicon-git-plain colored" />
-              <SkillText>Git</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>Git</p>
+            </li>
+            <li>
               <i className="devicon-github-plain colored" />
-              <SkillText>GitHub</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>GitHub</p>
+            </li>
+            <li>
               <i className="devicon-grunt-line colored" />
-              <SkillText>Grunt</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>Grunt</p>
+            </li>
+            <li>
               <i className="devicon-gulp-plain colored" />
-              <SkillText>Gulp</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>Gulp</p>
+            </li>
+            <li>
               <i className="devicon-photoshop-plain colored" />
-              <SkillText>Photoshop</SkillText>
-            </SkillItem>
-            <SkillItem>
+              <p>Photoshop</p>
+            </li>
+            <li>
               <i className="devicon-slack-plain colored" />
-              <SkillText>Slack</SkillText>
-            </SkillItem>
+              <p>Slack</p>
+            </li>
           </Items>
         </DevOther>
       </Skills>
 
-      <SubHeading>Certifications</SubHeading>
+      <h2>Certifications</h2>
       <Certification>
         <CertificationItem>
-          <CertHeading>Front End Web Nanodegree</CertHeading>
+          <h3>Front End Web Nanodegree</h3>
           <h4>Udacity</h4>
           <CertContent>
-            <CertText>
+            <p>
               On January 2018, I was awarded the Grow with Google Scholarship
               and graduated from Udacity's Nanodegree program that is in
               collaboration with Google. I worked on projects that taught me
@@ -289,7 +350,7 @@ const IndexPage = () => (
               requests and Service Workers. I've cherished the things I have
               learned and has guided me to be a better developer and problem
               solver.
-            </CertText>
+            </p>
             <Udacity />
           </CertContent>
           <CertLink>
@@ -303,15 +364,15 @@ const IndexPage = () => (
           </CertLink>
         </CertificationItem>
         <CertificationItem>
-          <CertHeading>Switching Pro Certification</CertHeading>
+          <h3>Switching Pro Certification</h3>
           <h4>TestOut</h4>
           <CertContent>
-            <CertText>
+            <p>
               Although it is not very related to web development, I was able to
               learn how devices communicate with each other and how to use the
               command line to configure Cisco switching devices. Definitely one
               of the hardest courses I have ever taken but rewarding.
-            </CertText>
+            </p>
             <TestOut />
           </CertContent>
           <CertLink>
@@ -321,10 +382,10 @@ const IndexPage = () => (
           </CertLink>
         </CertificationItem>
         <CertificationItem>
-          <CertHeading>MTA: Security Fundamentals</CertHeading>
+          <h3>MTA: Security Fundamentals</h3>
           <h4>Microsoft</h4>
           <CertContent>
-            <CertText>
+            <p>
               This Information Security certification by Microsoft taught me how
               to make sure that devices are safe and secure. I learned about
               physical, Internet and wireless security; how protect yourself
@@ -333,7 +394,7 @@ const IndexPage = () => (
               programming is my passion, I love to learn about computers in
               general and have pursued further understanding. I am also working
               on taking the CompTIA Security+ exam soon.
-            </CertText>
+            </p>
             <MTA />
           </CertContent>
           <CertLink>
@@ -347,10 +408,10 @@ const IndexPage = () => (
           </CertLink>
         </CertificationItem>
         <CertificationItem>
-          <CertHeading>CIW Network Technology Associate</CertHeading>
+          <h3>CIW Network Technology Associate</h3>
           <h4>CIW</h4>
           <CertContent>
-            <CertText>
+            <p>
               In High School, I took this entry level certificaiton. It did set
               a foundation for some of the things I would learn later in the
               future. I learn the fundementals of networking, Internet protocols
@@ -358,7 +419,7 @@ const IndexPage = () => (
               know since we build sites and apps that are on the Internet. But
               from the very beginning I have alwasys been interested in tech and
               it has led to my deveotion for coding.
-            </CertText>
+            </p>
             <CIW />
           </CertContent>
           <CertLink>
@@ -370,42 +431,74 @@ const IndexPage = () => (
       </Certification>
     </Sections>
     <Sections id="projects">
-      <Heading>Projects</Heading>
+      <h1>Projects</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-        magni ducimus voluptatem, cum ad minus nobis iusto libero itaque
-        asperiores. Facilis repellendusb ipsa amet ratione unde, praesentium
-        voluptate assumenda repellat vitae voluptatibus possimus animi labore
-        beatae expedita neque quo nam enim nobis necessitatibus aliquid id ipsam
-        dicta magnam.
+        Here are some of my personal and professional projects I have developed,
+        not including this site which was built with Gatsby.js.
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-        magni ducimus voluptatem, cum ad minus nobis iusto libero itaque
-        asperiores. Facilis repellendus ipsa amet ratione unde, praesentium
-        voluptate assumenda repellat vitae voluptatibus possimus animi labore
-        beatae expedita neque quo nam enim nobis necessitatibus aliquid id ipsam
-        dicta magnam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-        magni ducimus voluptatem, cum ad minus nobis iusto libero itaque
-        asperiores. Facilis repellendus ipsa amet ratione unde, praesentium
-        voluptate assumenda repellat vitae voluptatibus possimus animi labore
-        beatae expedita neque quo nam enim nobis necessitatibus aliquid id ipsam
-        dicta magnam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-        magni ducimus voluptatem, cum ad minus nobis iusto libero itaque
-        asperiores. Facilis repellendus ipsa amet ratione unde, praesentium
-        voluptate assumenda repellat vitae voluptatibus possimus animi labore
-        beatae expedita neque quo nam enim nobis necessitatibus aliquid id ipsam
-        dicta magnam.
-      </p>
+      <Projects>
+        <ProjectItem>
+          <h3>Comnets Consulting Corps</h3>
+          <Comnets />
+          <ProjectContent>
+            <p>
+              I built the front-end, back-end and hosted it myself on a server.
+              It uses a simple and minimal CSS framework called Skeleton but the
+              rest is built from the scratch from top to bottom.
+            </p>
+            <span>Built with:</span>
+            <ul>
+              <li>HTML</li>
+              <li>Handlebars</li>
+              <li>Sass</li>
+              <li>Javascript</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>Gulp</li>
+            </ul>
+          </ProjectContent>
+        </ProjectItem>
+        <ProjectItem>
+          <h3>Unsacred Grove</h3>
+          <UnsacredGrove />
+          <ProjectContent>
+            <p>
+              I decided to go with a JAMStack and use a headless CMS called
+              Sanity. It pulls from the CMS and dynamically builds the pages
+              with the content on Sanity.
+            </p>
+            <span>Built with:</span>
+            <ul>
+              <li>React.js</li>
+              <li>Gatsby</li>
+              <li>GraphQL</li>
+              <li>Sass</li>
+              <li>Sanity CMS</li>
+            </ul>
+          </ProjectContent>
+        </ProjectItem>
+        <ProjectItem>
+          <h3>Miami Neighborhood Map</h3>
+          <NeighborhoodMap />
+          <ProjectContent>
+            <p>
+              This React app shows some of the popular restaurants and tourist
+              spots in Miami. It uses the Google Maps API to mark them on the
+              map and then FourSquare API to display information about it.
+            </p>
+            <span>Built with:</span>
+            <ul>
+              <li>React.js</li>
+              <li>Sass</li>
+              <li>Google Maps API</li>
+              <li>FourSquare API</li>
+            </ul>
+          </ProjectContent>
+        </ProjectItem>
+      </Projects>
     </Sections>
     <Sections id="contact">
-      <Heading>Contact</Heading>
+      <h1>Contact</h1>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
         exercitationem unde, aspernatur at dicta eius numquam voluptatem beatae

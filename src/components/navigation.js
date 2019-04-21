@@ -21,9 +21,13 @@ const Nav = styled.nav`
 
 const NavLink = styled(Link)`
   padding: 1em;
-  color: #08497c;
+  color: #048484;
   font-weight: bold;
   text-decoration: none;
+  :hover {
+    transition: 0.2s;
+    color: #08497c;
+  }
 `
 
 if (typeof window !== "undefined") {

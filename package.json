@@ -1,10 +1,13 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "jonathanruiz.github.io",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "My portfolio webiste build with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jonathan Ruiz <jonadavruiz@gmail.com>",
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-styled-components": "^1.10.0",
     "devicon": "^2.2.0",
     "gatsby": "^2.3.16",

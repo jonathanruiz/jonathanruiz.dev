@@ -40,8 +40,8 @@ const Layout = ({ children }) => (
         <Navigation />
         <Content>
           <main>{children}</main>
-          <Footer />
         </Content>
+        <Footer />
       </>
     )}
   />

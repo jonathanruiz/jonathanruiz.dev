@@ -1,12 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
-import "devicon"
-import Gatsby from "../images/gatsbyjs-icon.svg"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import "devicon"
+import Gatsby from "../images/gatsbyjs-icon.svg"
 import Profile from "../components/images/profile"
 import Udacity from "../components/images/udacity"
 import TestOut from "../components/images/testout"
@@ -15,9 +12,11 @@ import CIW from "../components/images/ciw"
 import Comnets from "../components/images/comnets"
 import UnsacredGrove from "../components/images/unsacredgrove"
 import NeighborhoodMap from "../components/images/neighborhood"
-
 import TestOutCert from "../pdf/testout-cert.pdf"
 import CIWCert from "../pdf/ciw-cert.pdf"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const Sections = styled.section`
   margin-bottom: 20px;
@@ -153,6 +152,10 @@ const CertLink = styled.h4`
 
   a {
     color: #048484;
+    :hover {
+      transition: 0.2s;
+      color: #08497c;
+    }
   }
 `
 
@@ -187,8 +190,7 @@ const ProjectItem = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 
-  h3 {
-    // margin: 0;
+  h2 {
     text-align: center;
     font-size: 18px;
   }
@@ -217,6 +219,30 @@ const ProjectContent = styled.div`
       border-radius: 5px;
       color: #fff;
       background-color: #048484;
+    }
+  }
+`
+
+const Contact = styled.div`
+  background-color: #293347;
+  color: #fff;
+  border-radius: 20px;
+  padding: 80px 20px;
+`
+
+const Icons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  a {
+    color: #a5a5a5;
+    transition: 0.2s;
+    font-size: 60px;
+
+    :hover {
+      transition: 0.2s;
+      color: #fff;
     }
   }
 `
@@ -433,12 +459,14 @@ const IndexPage = () => (
     <Sections id="projects">
       <h1>Projects</h1>
       <p>
-        Here are some of my personal and professional projects I have developed,
-        not including this site which was built with Gatsby.js.
+        This website you are looking at was a lot of fun to develop. Took me
+        about a week to get it all put together using Gatsby. I also threw in
+        styled-components just because I wanted to try something new! Here are
+        some of my personal and professional projects I am proud to display.
       </p>
       <Projects>
         <ProjectItem>
-          <h3>Comnets Consulting Corps</h3>
+          <h2>Comnets Consulting Corps</h2>
           <Comnets />
           <ProjectContent>
             <p>
@@ -459,7 +487,7 @@ const IndexPage = () => (
           </ProjectContent>
         </ProjectItem>
         <ProjectItem>
-          <h3>Unsacred Grove</h3>
+          <h2>Unsacred Grove</h2>
           <UnsacredGrove />
           <ProjectContent>
             <p>
@@ -478,7 +506,7 @@ const IndexPage = () => (
           </ProjectContent>
         </ProjectItem>
         <ProjectItem>
-          <h3>Miami Neighborhood Map</h3>
+          <h2>Miami Neighborhood Map</h2>
           <NeighborhoodMap />
           <ProjectContent>
             <p>
@@ -497,15 +525,40 @@ const IndexPage = () => (
         </ProjectItem>
       </Projects>
     </Sections>
+
     <Sections id="contact">
-      <h1>Contact</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-        exercitationem unde, aspernatur at dicta eius numquam voluptatem beatae
-        in reiciendis eveniet? Consequatur odio excepturi minus!
-      </p>
+      <Contact>
+        <h1>Contact</h1>
+        <h2 style={{ textAlign: "center" }}>
+          Have a question or interested in hiring? Let's meet up and chat for a
+          bit! You can reach me through my email or LinkedIn. Or check out my
+          other projects on Github!
+        </h2>
+        <Icons>
+          <a
+            href="mailto:jonadavruiz@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faEnvelope} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jonathan-ruiz-9a3038168/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a
+            href="https://github.com/jonathanruiz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+        </Icons>
+      </Contact>
     </Sections>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 

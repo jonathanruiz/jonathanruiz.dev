@@ -41,7 +41,7 @@ const Info = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     flex-direction: row;
   }
 `
@@ -50,8 +50,8 @@ const ImageContainer = styled.div`
   max-width: 300px;
   margin-bottom: 1.45rem;
 
-  @media (min-width: 700px) {
-    padding-right: 30px;
+  @media (min-width: 800px) {
+    padding-right: 50px;
   }
 `
 

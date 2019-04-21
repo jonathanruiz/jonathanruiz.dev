@@ -16,14 +16,14 @@ import styled from "styled-components"
 
 const StyledImg = styled(Img)`
   border-radius: 50%;
-  width: 150px;
+  width: 200px;
 `
 
 const Profile = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "profile-picture.png" }) {
+        placeholderImage: file(relativePath: { eq: "profile-picture.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid

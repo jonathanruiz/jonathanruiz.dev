@@ -1,29 +1,58 @@
 {
-  "name": "jonathanruiz",
-  "version": "1.0.0",
-  "description": "Portfolio website",
-  "main": "index.js",
+  "name": "jonathanruiz.github.io",
+  "private": true,
+  "description": "My portfolio webiste build with Gatsby",
+  "version": "0.1.0",
+  "author": "Jonathan Ruiz <jonadavruiz@gmail.com>",
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "babel-plugin-styled-components": "^1.10.0",
+    "devicon": "^2.2.0",
+    "gatsby": "^2.3.16",
+    "gatsby-background-image": "^0.3.3",
+    "gatsby-image": "^2.0.37",
+    "gatsby-plugin-manifest": "^2.0.28",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-plugin-typography": "^2.2.13",
+    "gatsby-source-filesystem": "^2.0.29",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "react-typed": "^1.1.2",
+    "react-typography": "^0.16.19",
+    "smooth-scroll": "^16.0.3",
+    "styled-components": "^4.2.0",
+    "typography": "^0.16.19"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonathanruiz/jonathanruiz.github.io.git"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
-  "author": "Jonathan Ruiz",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jonathanruiz/jonathanruiz.github.io/issues"
-  },
-  "homepage": "https://github.com/jonathanruiz/jonathanruiz.github.io#readme",
-  "devDependencies": {
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "babel-core": "^6.26.3",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-babel-minify": "^0.5.0",
-    "gulp-eslint": "^5.0.0",
-    "gulp-sass": "^4.0.1"
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

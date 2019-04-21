@@ -13,7 +13,7 @@ import styled from "styled-components"
 import Jumbo from "./jumbo"
 import "./layout.scss"
 import Navigation from "./navigation"
-import Footer from "./Footer"
+import Footer from "./footer"
 
 const Content = styled.div`
   font-family: Poppins, Roboto, sans-serif;

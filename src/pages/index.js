@@ -201,6 +201,17 @@ const ProjectItem = styled.div`
     font-size: 18px;
   }
 
+  h4 {
+    margin-top: 20px;
+    a {
+      color: #048484;
+      :hover {
+        transition: 0.2s;
+        color: #08497c;
+      }
+    }
+  }
+
   @media (min-width: 800px) {
     width: 33%;
   }
@@ -234,6 +245,7 @@ const Contact = styled.div`
   color: #fff;
   border-radius: 20px;
   padding: 80px 20px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.2);
 
   hr {
     background-color: #fff;
@@ -497,9 +509,18 @@ const IndexPage = () => (
               <li>Gulp</li>
             </ul>
           </ProjectContent>
+          <h4>
+            <a
+              href="http://www.comnetscorp.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See Project
+            </a>
+          </h4>
         </ProjectItem>
         <ProjectItem>
-          <h2>Unsacred Grove</h2>
+          <h2>Unsacred Grove (WIP)</h2>
           <UnsacredGrove />
           <ProjectContent>
             <p>
@@ -516,6 +537,15 @@ const IndexPage = () => (
               <li>Sanity CMS</li>
             </ul>
           </ProjectContent>
+          <h4>
+            <a
+              href="https://unsacredgrove.netlify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See Project
+            </a>
+          </h4>
         </ProjectItem>
         <ProjectItem>
           <h2>Miami Neighborhood Map</h2>
@@ -534,6 +564,15 @@ const IndexPage = () => (
               <li>FourSquare API</li>
             </ul>
           </ProjectContent>
+          <h4>
+            <a
+              href="https://miami-neighborhood.netlify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See Project
+            </a>
+          </h4>
         </ProjectItem>
       </Projects>
     </Sections>

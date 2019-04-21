@@ -19,7 +19,13 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const Sections = styled.section`
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+
+  hr {
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 3px;
+  }
 
   h1 {
     text-align: center;
@@ -228,6 +234,10 @@ const Contact = styled.div`
   color: #fff;
   border-radius: 20px;
   padding: 80px 20px;
+
+  hr {
+    background-color: #fff;
+  }
 `
 
 const Icons = styled.div`
@@ -255,6 +265,7 @@ const IndexPage = () => (
     />
     <Sections id="about">
       <h1>About Me</h1>
+      <hr />
       <Info>
         <ImageContainer>
           <ProfileImage />
@@ -458,6 +469,7 @@ const IndexPage = () => (
     </Sections>
     <Sections id="projects">
       <h1>Projects</h1>
+      <hr />
       <p>
         This website you are looking at was a lot of fun to develop. Took me
         about a week to get it all put together using Gatsby. I also threw in
@@ -529,6 +541,7 @@ const IndexPage = () => (
     <Sections id="contact">
       <Contact>
         <h1>Contact</h1>
+        <hr />
         <h2 style={{ textAlign: "center" }}>
           Have a question or interested in hiring? Let's meet up and chat for a
           bit! You can reach me through my email or LinkedIn. Or check out my

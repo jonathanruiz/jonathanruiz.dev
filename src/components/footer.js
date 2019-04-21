@@ -17,7 +17,6 @@ const Inner = styled.div`
     margin-right: 50px;
     height: 2px;
     border-radius: 3px;
-    background-color: #048484;
   }
 
   footer {

@@ -58,6 +58,9 @@ typings/
 .cache/
 public
 
+# Assets
+assets
+
 # Mac files
 .DS_Store
 

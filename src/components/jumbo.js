@@ -6,6 +6,8 @@ import BackgroundImage from "gatsby-background-image"
 import Typed from "react-typed"
 import styled from "styled-components"
 
+import Logo from "./images/logo"
+
 // Styled Components
 const StyledBackgroundHeader = styled.div`
   width: 100%;
@@ -36,6 +38,10 @@ const Heading = styled.h1`
 const HeadingLink = styled(Link)`
   color: #08497c;
   text-decoration: none;
+
+  img {
+    width: 60px;
+  }
 `
 
 const Hero = styled.div`
@@ -100,7 +106,9 @@ const JumboHead = ({ siteTitle, className }) => (
             <Container>
               <Inner>
                 <Heading>
-                  <HeadingLink to="/">{siteTitle}</HeadingLink>
+                  <HeadingLink to="/">
+                    <Logo />
+                  </HeadingLink>
                 </Heading>
               </Inner>
               <Hero>

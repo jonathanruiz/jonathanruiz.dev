@@ -12,8 +12,6 @@ import CIW from "../components/images/ciw"
 import Comnets from "../components/images/comnets"
 import UnsacredGrove from "../components/images/unsacredgrove"
 import NeighborhoodMap from "../components/images/neighborhood"
-import TestOutCert from "../pdf/testout-cert.pdf"
-import CIWCert from "../pdf/ciw-cert.pdf"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
@@ -425,7 +423,11 @@ const IndexPage = () => (
             <TestOut />
           </CertContent>
           <CertLink>
-            <a href={TestOutCert} target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.dropbox.com/s/i2psheq6zykt56j/TestOut%20Certification.pdf?dl=0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               See Credential
             </a>
           </CertLink>
@@ -472,7 +474,11 @@ const IndexPage = () => (
             <CIW />
           </CertContent>
           <CertLink>
-            <a href={CIWCert} target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.dropbox.com/s/zzoev6457s1yobs/CIW%20Certificate.pdf?dl=0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               See Credential
             </a>
           </CertLink>

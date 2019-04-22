@@ -484,9 +484,10 @@ const IndexPage = () => (
       <hr />
       <p>
         This website you are looking at was a lot of fun to develop. Took me
-        about a week to get it all put together using Gatsby. I also threw in
-        styled-components just because I wanted to try something new! Here are
-        some of my personal and professional projects I am proud to display.
+        about a week to get it all put together using Gatsby and Sass. I also
+        threw in styled-components just because I wanted to try something new!
+        Here are some of my personal and professional projects I am proud to
+        display.
       </p>
       <Projects>
         <ProjectItem>
@@ -494,9 +495,9 @@ const IndexPage = () => (
           <Comnets />
           <ProjectContent>
             <p>
-              I built the front-end, back-end and hosted it myself on a server.
-              It uses a simple and minimal CSS framework called Skeleton but the
-              rest is built from the scratch from top to bottom.
+              I built the front-end, back-end and hosted it myself on an IIS
+              server. It uses a simple and minimal CSS framework called Skeleton
+              but the rest is built from the scratch from top to bottom.
             </p>
             <span>Built with:</span>
             <ul>

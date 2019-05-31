@@ -9,7 +9,7 @@ const Container = styled.div`
 const Inner = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 0 auto;
   max-width: 960px;
   padding: 1.45rem 1.0875rem;

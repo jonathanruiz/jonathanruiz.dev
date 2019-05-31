@@ -17,7 +17,9 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const Sections = styled.section`
-  margin-bottom: 40px;
+  margin-top: 40px;
+
+  /* margin-bottom: 40px; */
 
   hr {
     margin-left: 25%;
@@ -26,6 +28,7 @@ const Sections = styled.section`
   }
 
   h1 {
+    padding-top: 40px;
     text-align: center;
   }
 

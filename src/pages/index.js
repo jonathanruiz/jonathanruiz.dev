@@ -63,16 +63,25 @@ const Skills = styled.div`
   @media (min-width: 700px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "lt do";
+    grid-template-areas:
+      "lt do"
+      "lr lr";
   }
 `
 
 const LangTech = styled.div`
   grid-area: lt;
+  margin-bottom: 30px;
 `
 
 const DevOther = styled.div`
   grid-area: do;
+  margin-bottom: 30px;
+`
+
+const Learning = styled.div`
+  grid-area: lr;
+  margin-bottom: 30px;
 `
 
 const Items = styled.ul`
@@ -351,6 +360,14 @@ const IndexPage = () => (
           <h3>Dev Tool/Other</h3>
           <Items>
             <li>
+              <i className="devicon-windows8-plain colored" />
+              <p>Windows</p>
+            </li>
+            <li>
+              <i className="devicon-ubuntu-plain colored" />
+              <p>Ubuntu</p>
+            </li>
+            <li>
               <i className="devicon-visualstudio-plain colored" />
               <p>VS Code</p>
             </li>
@@ -380,6 +397,23 @@ const IndexPage = () => (
             </li>
           </Items>
         </DevOther>
+        <Learning>
+          <h3>Learning</h3>
+          <Items>
+            <li>
+              <i className="devicon-php-plain colored" />
+              <p>PHP</p>
+            </li>
+            <li>
+              <i className="devicon-mysql-plain colored" />
+              <p>MySQL</p>
+            </li>
+            <li>
+              <i className="devicon-typescript-plain colored" />
+              <p>TypeScript</p>
+            </li>
+          </Items>
+        </Learning>
       </Skills>
 
       <h2>Certifications</h2>

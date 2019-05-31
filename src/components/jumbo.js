@@ -5,6 +5,8 @@ import { StaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Typed from "react-typed"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 import Logo from "./images/logo"
 
@@ -68,6 +70,7 @@ const MainTyped = styled(Typed)`
 
 const SubTyped = styled(Typed)`
   line-height: 1;
+  margin-bottom: 50px;
 
   @media (min-width: 480px) {
     font-size: 20px;
@@ -76,6 +79,20 @@ const SubTyped = styled(Typed)`
   @media (min-width: 700px) {
     font-size: 30px;
   }
+`
+
+const ChevronLink = styled(Link)`
+  margin: 0px auto;
+  padding: 15px;
+  color: #000;
+  &:hover {
+    transition: 0.2s 0.2s;
+    color: #fff;
+  }
+`
+
+const ChevronDown = styled(FontAwesomeIcon)`
+  font-size: 50px;
 `
 
 const JumboHead = ({ siteTitle, className }) => (
@@ -126,6 +143,9 @@ const JumboHead = ({ siteTitle, className }) => (
                   backSpeed={50}
                   smartBackspace
                 />
+                <ChevronLink to="#about">
+                  <ChevronDown icon={faChevronDown} />
+                </ChevronLink>
               </Hero>
             </Container>
           </BackgroundImage>

@@ -143,7 +143,7 @@ const JumboHead = ({ siteTitle, className }) => (
                   backSpeed={50}
                   smartBackspace
                 />
-                <ChevronLink to="#about">
+                <ChevronLink to="#about" aria-label="Learn More">
                   <ChevronDown icon={faChevronDown} />
                 </ChevronLink>
               </Hero>

@@ -635,6 +635,7 @@ const IndexPage = () => (
             href="mailto:jonadavruiz@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Email"
           >
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
@@ -642,6 +643,7 @@ const IndexPage = () => (
             href="https://www.linkedin.com/in/jonathan-ruiz-9a3038168/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
@@ -649,6 +651,7 @@ const IndexPage = () => (
             href="https://github.com/jonathanruiz"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Github"
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>

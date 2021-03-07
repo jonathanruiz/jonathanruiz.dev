@@ -1,5 +1,0 @@
-﻿{
-  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
-  "Domain": "jonathanruiz.dev",
-  "Id": "5881b52b-dfa2-4ac7-b63f-e6be9c65b6b8"
-}

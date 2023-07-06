@@ -1,19 +1,15 @@
 ---
-import { MainNav } from '@/components/main-nav';
-import {ThemeProvider} from '@/components/theme-provider';
+import { MainNav } from "@/components/main-nav";
 ---
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <MainNav />
-        <slot />
-    </ThemeProvider>
-
-</body>
+  </head>
+  <body>
+    <MainNav client:load />
+    <slot />
+  </body>
 </html>

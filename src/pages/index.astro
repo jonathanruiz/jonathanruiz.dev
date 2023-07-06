@@ -1,6 +1,6 @@
 ---
 import '@/styles/globals.css'
-import { Button } from "@/components/ui/button"
+import MainLayout from '@/layouts/main-layout.astro'
 ---
 
 
@@ -13,6 +13,8 @@ import { Button } from "@/components/ui/button"
 		<title>Astro</title>
 	</head>
 	<body>
-		<Button>Hello World</Button>
+		<MainLayout>
+			<h1>Hello, Astro!</h1>
+		</MainLayout>
 	</body>
 </html>

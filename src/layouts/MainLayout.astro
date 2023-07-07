@@ -1,5 +1,5 @@
 ---
-import ThemeIcon from "@/components/ThemeIcon.astro";
+import Nav from "@/components/Nav.astro";
 import "@/styles/globals.css";
 ---
 
@@ -12,15 +12,7 @@ import "@/styles/globals.css";
   </head>
   <body class="transition-all">
 	<div class="relative flex min-h-screen flex-col">
-		<header class="sticky top-0 z-40 w-full bg-background">
-            <div class="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-                <div class="flex flex-1 items-center justify-end space-x-4">
-                    <nav class="flex items-center space-x-1">
-                        <ThemeIcon />
-                    </nav>
-                </div>
-            </div>
-        </header>
+		<Nav />
 	</div>
   </body>
 </html>

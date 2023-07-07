@@ -1,26 +1,12 @@
 ---
 import { Icons } from "./icons";
-
+import { Button } from "./ui/button";
 ---
-<button id="themeToggle">
+<Button id="themeToggle" variant="ghost" size="sm">
     <Icons.sun className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
     <Icons.moon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
     <span class="sr-only">Toggle theme</span>
-</button>
-  
-<style>
-    #themeToggle {
-        border: 0;
-        background: none;
-    }
-    .sun { fill: black; }
-    .moon { fill: transparent; }
-
-
-    :global(.dark) .sun { fill: transparent; }
-    :global(.dark) .moon { fill: white; }
-
-</style>
+</Button>
   
 <script is:inline>
 const theme = (() => {

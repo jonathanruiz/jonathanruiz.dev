@@ -1,5 +1,5 @@
 ---
-import { MainNav } from "@/components/main-nav";
+import ThemeIcon from "@/components/ThemeIcon.astro";
 ---
 
 <html lang="en">
@@ -10,7 +10,12 @@ import { MainNav } from "@/components/main-nav";
     <title>Document</title>
   </head>
   <body class="transition-all">
-    <MainNav client:load />
+    <div class="flex gap-6 md:gap-10">
+			<div class="flex items-center space-x-2">
+				<span class="inline-block font-bold">Jonathan Ruiz</span>
+				<ThemeIcon />
+			</div>
+		</div>
     <slot />
   </body>
 </html>

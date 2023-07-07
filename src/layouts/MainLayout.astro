@@ -11,17 +11,16 @@ import "@/styles/globals.css";
     <title>Portfolio</title>
   </head>
   <body class="transition-all">
-    <div class="flex gap-6 md:gap-10">
-			<div class="flex items-center space-x-2">
-				<ThemeIcon />
-			</div>
+	<div class="relative flex min-h-screen flex-col">
+		<header class="sticky top-0 z-40 w-full bg-background">
+            <div class="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+                <div class="flex flex-1 items-center justify-end space-x-4">
+                    <nav class="flex items-center space-x-1">
+                        <ThemeIcon />
+                    </nav>
+                </div>
+            </div>
+        </header>
 	</div>
-	<section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-		<div class="flex max-w-[980px] flex-col gap-2">
-			<section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-				<slot />
-			</section>
-		</div>
-	</section>
   </body>
 </html>

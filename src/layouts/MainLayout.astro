@@ -15,7 +15,13 @@ import ThemeIcon from "@/components/ThemeIcon.astro";
 				<span class="inline-block font-bold">Jonathan Ruiz</span>
 				<ThemeIcon />
 			</div>
+	</div>
+	<section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+		<div class="flex max-w-[980px] flex-col gap-2">
+			<section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+				<slot />
+			</section>
 		</div>
-    <slot />
+	</section>
   </body>
 </html>

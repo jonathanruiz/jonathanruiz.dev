@@ -1,6 +1,5 @@
 /** @type {import("prettier").Options} */
 const config = {
-    ...require("prettier-config-standard"),
     plugins: [require.resolve("prettier-plugin-astro")],
     overrides: [
         {
@@ -13,7 +12,8 @@ const config = {
     endOfLine: "lf",
     semi: false,
     singleQuote: false,
-    tabWidth: 4
+    tabWidth: 4,
+    trailingComma: "none"
 }
 
 module.exports = config

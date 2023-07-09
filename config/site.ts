@@ -1,4 +1,3 @@
-
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
@@ -8,19 +7,19 @@ export const siteConfig = {
     mainNav: [
         {
             title: "Home",
-            href: "/",
+            href: "/"
         },
         {
             title: "Projects",
-            href: "/projects",
+            href: "/projects"
         },
         {
             title: "Blog",
-            href: "/blog",
+            href: "/blog"
         }
     ],
     links: {
         github: "https://github.com/jonathanruiz",
-        linkedin: "https://www.linkedin.com/in/jonathan-ruiz-9a3038168/",
-    },
+        linkedin: "https://www.linkedin.com/in/jonathan-ruiz-9a3038168/"
+    }
 }

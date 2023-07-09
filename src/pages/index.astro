@@ -3,5 +3,14 @@ import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-	<h1 class="text-2xl">Below Container</h1>
+	<section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+		<div class="flex max-w-[980px] flex-col gap-2">
+			<h1 class="font-extrabold leading-tight tracking-tighter sm:text-xl md:text-2xl lg:text-3xl">
+				Jonathan Ruiz
+			</h1>
+			<section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+				<p>Test</p>
+			</section>
+		</div>
+	</section>
 </MainLayout>

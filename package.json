@@ -7,8 +7,7 @@
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
-        "astro": "astro",
-        "prettier": "pnpm prettier --write --plugin-search-dir=. ."
+        "astro": "astro"
     },
     "dependencies": {
         "@astrojs/react": "^2.2.1",

@@ -1,5 +1,6 @@
 /** @type {import("prettier").Options} */
 const config = {
+    ...require("prettier-config-standard"),
     plugins: [require.resolve("prettier-plugin-astro")],
     overrides: [
         {

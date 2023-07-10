@@ -5,15 +5,15 @@ import MainLayout from "@/layouts/MainLayout.astro";
 
 <MainLayout>
 	<section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-		<div class="flex max-w-[980px] flex-col gap-2">
+		<div class="flex flex-col gap-2">
 			<div class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-				<section id="hero">
+				<section id="hero" class="max-w-[720px]">
 					<h1 class="font-extrabold leading-tight tracking-tighter sm:text-xl md:text-2xl lg:text-6xl">
 					Hi, I'm <span class="bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent">Jonathan Ruiz</span>, <br>a software developer.
 					</h1>
 					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam sapiente sint ex quisquam ea autem hic itaque eligendi aut est nemo dignissimos optio, nulla earum quasi vel ipsum molestias omnis?</p>
 				</section>
-				<section id="about">
+				<section id="about" class="max-w-[480px]">
 					<h2 class="font-extrabold leading-tight tracking-tighter sm:text-xl md:text-xl lg:text-4xl bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent">About Me</h2>
 					<About />
 				</section>

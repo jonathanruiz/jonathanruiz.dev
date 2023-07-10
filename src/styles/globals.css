@@ -76,3 +76,17 @@
         @apply bg-background text-foreground;
     }
 }
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(-5%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounce 2s infinite ease-in-out;
+}

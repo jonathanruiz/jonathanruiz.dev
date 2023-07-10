@@ -5,12 +5,18 @@ import MainLayout from "@/layouts/MainLayout.astro";
 <MainLayout>
 	<section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
 		<div class="flex max-w-[980px] flex-col gap-2">
-			<h1 class="font-extrabold leading-tight tracking-tighter sm:text-xl md:text-2xl lg:text-3xl">
-				Jonathan Ruiz
-			</h1>
-			<section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-				<p>Test</p>
-			</section>
+			<div class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+				<section id="hero">
+					<h1 class="font-extrabold leading-tight tracking-tighter sm:text-xl md:text-2xl lg:text-6xl">
+					Hi, I'm <span class="bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent">Jonathan Ruiz</span>, <br>a software developer.
+					</h1>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam sapiente sint ex quisquam ea autem hic itaque eligendi aut est nemo dignissimos optio, nulla earum quasi vel ipsum molestias omnis?</p>
+				</section>
+				<section id="about">
+					<h2 class="font-extrabold leading-tight tracking-tighter sm:text-xl md:text-xl lg:text-4xl bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent">About Me</h2>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem laboriosam beatae fuga quis minima, delectus, cumque dignissimos cum ut ducimus temporibus dolorum nisi! Atque molestias deserunt, fugiat illo minus doloremque!</p>
+				</section>
+			</div>
 		</div>
 	</section>
 </MainLayout>

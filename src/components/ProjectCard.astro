@@ -1,5 +1,6 @@
 ---
 import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "config/site";
 ---
 
@@ -9,9 +10,14 @@ import { siteConfig } from "config/site";
             <Card>
                 <CardContent>
                     <CardTitle>{project.title}</CardTitle>
-                    <CardDescription></CardDescription>
+                    <CardDescription>{project.description}</CardDescription>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="gap-2">
+                    {project.tags.map(tag => {
+                        return (
+                            <Badge>{tag}</Badge>
+                        )
+                    })}
                 </CardFooter>
             </Card>
         )

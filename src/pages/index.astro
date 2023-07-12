@@ -13,23 +13,25 @@ import MainLayout from "@/layouts/MainLayout.astro";
 					</h1>
 					<p>Developing applications using React.js and TypeScript, as well as utilizing Go for backend development, while also deploying infrastructure through the utilization of Azure, Terraform, Ansible, and Docker.</p>
 				</section>
-				<section class="max-w-[600px] flex items-center justify-center animate-bounce-slow">
-					<img src="/imgs/coding-left.png" alt="Code editor left" class="w-2/3"/>
-				</section>
-				<section id="about" class="mb-4">
-					<div class="mx-4 flex items-center justify-center">
-						<img src="/imgs/profile.jpg" alt="Jonathan Ruiz" class="rounded-full w-48" />
-					</div>
-					<div>
-						<h2 class="font-extrabold leading-tight tracking-tighter text-4xl bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent mb-4">About Me</h2>
-						<div class='mt-4'>
-							<p class="mb-2">I'm a Utah based software engineer doing all things full-stack development. I've had a passion for technology from a very young age and have worked in different parts of the industry, going anywhere from networking to cloud to DevOps. The one consistant thing that I've always been motivated to do is software development. I love the challenge of solving problems and building things that can make people's lives easier.
-							</p>
-							<p class="mb-2">I'm a Miami native from Nicaraguan and Honduran descent. I love to try new foods and travel to new places. I'm like to hike and chase any trail that ends with a waterfall. Currently struggling to learn how to play the piano and speak Italian. I genuinely enjoy expanding my knowledge and it suits me well since the tech industry is constantly evolving, presenting endless learning opportunities.
-							</p>
+				<div class="md:flex">
+					<section class="flex items-center justify-center animate-bounce-slow md:basis-1/2">
+						<img src="/imgs/coding-left.png" alt="Code editor left" class="w-2/3"/>
+					</section>
+					<section id="about" class="mb-4 md:basis-1/2">
+						<div class="mx-4 flex items-center justify-center">
+							<img src="/imgs/profile.jpg" alt="Jonathan Ruiz" class="rounded-full w-48" />
 						</div>
-					</div>
-				</section>
+						<div>
+							<h2 class="font-extrabold leading-tight tracking-tighter text-4xl bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent mb-4">About Me</h2>
+							<div class='mt-4'>
+								<p class="mb-2">I'm a Utah based software engineer doing all things full-stack development. I've had a passion for technology from a very young age and have worked in different parts of the industry, going anywhere from networking to cloud to DevOps. The one consistant thing that I've always been motivated to do is software development. I love the challenge of solving problems and building things that can make people's lives easier.
+								</p>
+								<p class="mb-2">I'm a Miami native from Nicaraguan and Honduran descent. I love to try new foods and travel to new places. I'm like to hike and chase any trail that ends with a waterfall. Currently struggling to learn how to play the piano and speak Italian. I genuinely enjoy expanding my knowledge and it suits me well since the tech industry is constantly evolving, presenting endless learning opportunities.
+								</p>
+							</div>
+						</div>
+					</section>
+				</div>
 				<section id="projects" class="mb-4">
 						<h2 class="font-extrabold leading-tight tracking-tighter text-4xl bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent mb-4">Projects</h2>
 						<ProjectCard />

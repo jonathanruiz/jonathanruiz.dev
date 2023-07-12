@@ -1,0 +1,25 @@
+---
+import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "config/site";
+---
+
+<div class="flex space-x-5 items-stretch overflow-x-auto">
+    {siteConfig.projects.map(project => {
+        return (
+            <Card>
+                <CardContent>
+                    <CardTitle className="mt-4">{project.title}</CardTitle>
+                    <CardDescription>{project.description}</CardDescription>
+                </CardContent>
+                <CardFooter className="w-[350px]">
+                        {project.tags.map(tag => {
+                            return (
+                                <Badge className="mr-2">{tag}</Badge>
+                            )
+                        })}
+                </CardFooter>
+            </Card>
+        )
+    })}
+</div>

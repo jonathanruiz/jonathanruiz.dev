@@ -4,19 +4,19 @@ import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-	<section class="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+	<section class="container items-center">
 		<div class="flex flex-col gap-2">
-			<div class="container lg:grid grid-row-6 grid-col-3 gap-6 pb-8 pt-6 md:py-10">
-				<section id="hero" class="max-w-[500px] md:max-w-[720px] md:row-start-1">
+			<div class="container gap-6 pb-8 pt-6">
+				<section id="hero" class="max-w-[500px] md:max-w-[720px] pb-4">
 					<h1 class="font-extrabold leading-tight tracking-tighter text-5xl lg:text-6xl">
 					Hi, I'm <span class="bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent">Jonathan Ruiz</span>, <br>a software developer.
 					</h1>
 					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam sapiente sint ex quisquam ea autem hic itaque eligendi aut est nemo dignissimos optio, nulla earum quasi vel ipsum molestias omnis?</p>
 				</section>
-				<section class="max-w-[600px] flex items-center justify-center row-start-4 col-start-1 animate-bounce-slow">
+				<section class="max-w-[600px] flex items-center justify-center animate-bounce-slow">
 					<img src="/imgs/coding-left.png" alt="Code editor left" class="w-2/3"/>
 				</section>
-				<section id="about" class="row-start-4 col-start-2">
+				<section id="about">
 					<div class="mx-4 flex items-center justify-center">
 						<img src="/imgs/profile.jpg" alt="Jonathan Ruiz" class="rounded-full w-48" />
 					</div>
@@ -30,11 +30,11 @@ import MainLayout from "@/layouts/MainLayout.astro";
 						</div>
 					</div>
 				</section>
-				<section class="row-start-5">
+				<section>
 					<h2 class="font-extrabold leading-tight tracking-tighter text-4xl bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent mb-2">Projects</h2>
 					<ProjectCard />
 				</section>
-				<section class="row-start-6">
+				<section>
 					<h2 class="font-extrabold leading-tight tracking-tighter text-4xl bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent mb-2">Blog</h2>
 				</section>
 			</div>

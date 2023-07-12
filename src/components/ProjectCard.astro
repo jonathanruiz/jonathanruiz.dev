@@ -12,12 +12,12 @@ import { siteConfig } from "config/site";
                     <CardTitle className="mt-4">{project.title}</CardTitle>
                     <CardDescription>{project.description}</CardDescription>
                 </CardContent>
-                <CardFooter className="gap-2">
-                    {project.tags.map(tag => {
-                        return (
-                            <Badge>{tag}</Badge>
-                        )
-                    })}
+                <CardFooter className="w-[350px]">
+                        {project.tags.map(tag => {
+                            return (
+                                <Badge className="mr-2">{tag}</Badge>
+                            )
+                        })}
                 </CardFooter>
             </Card>
         )

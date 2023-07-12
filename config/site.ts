@@ -28,14 +28,14 @@ export const siteConfig = {
             description: "This site you're on right now!",
             link: "https://jonathanruiz.dev",
             githubRepo: "https://github.com/jonathanruiz/jonathanruiz.dev",
-            tags: ["Astro", "TailwindCSS"]
+            tags: ["Astro", "React", "TypeScript", "TailwindCSS"]
         },
         {
             title: "Hacker News Next-js",
             description: "A Hacker News clone built with Next.js.",
             link: "",
             githubRepo: "https://github.com/jonathanruiz/hacker-news-nextjs",
-            tags: ["Next.js", "TypeScript", "TailwindCSS"]
+            tags: ["Next.js", "React", "TypeScript", "TailwindCSS"]
         },
         {
             title: "nato-reader",

@@ -31,14 +31,14 @@ export const siteConfig = {
             tags: ["Astro", "React", "TypeScript", "TailwindCSS"]
         },
         {
-            title: "Hacker News Next-js",
+            title: "Hacker News Next.js",
             description: "A Hacker News clone built with Next.js.",
             link: "",
             githubRepo: "https://github.com/jonathanruiz/hacker-news-nextjs",
             tags: ["Next.js", "React", "TypeScript", "TailwindCSS"]
         },
         {
-            title: "nato-reader",
+            title: "Nato Reader",
             description:
                 "A CLI tool to read an input as the NATO phonetic alphabet.",
             link: "https://github.com/jonathanruiz/nato-reader",

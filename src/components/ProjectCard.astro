@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "config/site";
 ---
 
-<div class="flex space-x-5 items-stretch">
+<div class="flex space-x-5 items-stretch overflow-x-auto">
     {siteConfig.projects.map(project => {
         return (
             <Card>

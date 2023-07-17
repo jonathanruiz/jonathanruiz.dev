@@ -1,12 +1,24 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 
+const posts = await Astro.glob("../posts/*.md");
+
 ---
 
 <MainLayout>
-  <section>
-    <div>
-        
-    </div>
+	<section class="container items-center">
+		<div class="flex flex-col gap-2">
+			<div class="container pb-8 pt-6">
+            {posts.map((post) => (
+                    <div>
+                        <h2>{post.frontmatter.title}</h2>
+                        <p>{post.frontmatter.description}</p>
+                        <p>{post.frontmatter.date}</p>
+                        <a href={`/${post.frontmatter.slug}`}>Read more</a>
+                    </div>
+                ))
+            }
+            </div>
+        </div>
   </section>
 </MainLayout>

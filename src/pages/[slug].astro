@@ -1,0 +1,28 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+    const posts = await Astro.glob("../posts/*.md");
+
+    return posts.map(post => ({
+        params: {
+            slug: post.frontmatter.slug
+        },
+        props: {
+            post
+        }
+    }))
+}
+
+const { Content, frontmatter } = Astro.props.post
+---
+
+<MainLayout>
+    <section class="container items-center">
+		<div class="flex flex-col gap-2">
+			<div class="container pb-8 pt-6">
+                <Content />
+            </div>
+        </div>
+    </section>
+</MainLayout>

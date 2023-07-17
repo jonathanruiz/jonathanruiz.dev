@@ -1,8 +1,9 @@
 ---
-title: Level up your documentation game with Mermaid
 slug: level-up-your-documentation-game-with-mermaid
+title: Level up your documentation game with Mermaid
+description: Mermaid is an open-source tool that allows you to create diagrams using text and code. This article will go over why you should use Mermaid, how to use it and the diagrams and charts available.
 author: Johnny Ruiz
-created: 2023-07-15
+date: 2023-07-15
 tags: markdown, mermaid
 ---
 

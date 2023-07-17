@@ -66,7 +66,6 @@ flowchart TD
 ### Pie Chart
 
 ```mermaid
-
 pie title Pets adopted by volunteers
     "Dogs" : 386
     "Cats" : 85
@@ -127,7 +126,6 @@ mindmap
 ### Quadrant Chart
 
 ```mermaid
-
 quadrantChart
     title Reach and engagement of campaigns
     x-axis Low Reach --> High Reach
@@ -151,6 +149,6 @@ If you're disappointed because a specific type of diagram is not supported, then
 
 ## Where do you start?
 
-Fortunately, the developers behind Mermaid do a great job with providing quality documentation on how to use it. The [Mermaid Live Editor](https://mermaid.live/) is a tool developed by the same developers that can easily give you ability to create these diagrams.
+As previously mentioned, the [Mermaid Live Editor](https://mermaid.live/) gives you the ability to render the Mermaid diagrams you code. Additionally, the developers behind Mermaid do a great job with providing quality documentation on how to use it. 
 
 Technical writing is an integral part of software development, and Mermaid can be a valuable tool for enhancing the quality and effectiveness of technical documentation. By leveraging Mermaid to create visual diagrams and charts, technical writers can improve communication, simplify complex concepts, foster collaboration, and enhance the overall readability and comprehension of the written content.

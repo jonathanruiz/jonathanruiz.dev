@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 const { Content, frontmatter } = Astro.props.post
 ---
 
-<MainLayout>
+<MainLayout title={frontmatter.title} description={frontmatter.description}>
     <section class="container items-center">
 		<div class="flex flex-col gap-2">
 			<div class="container pb-8 pt-6">

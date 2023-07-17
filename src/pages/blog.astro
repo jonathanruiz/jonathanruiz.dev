@@ -1,5 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
+import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const posts = await Astro.glob("../posts/*.md");
 
@@ -10,12 +12,16 @@ const posts = await Astro.glob("../posts/*.md");
 		<div class="flex flex-col gap-2">
 			<div class="container pb-8 pt-6">
             {posts.map((post) => (
-                    <div>
-                        <h2>{post.frontmatter.title}</h2>
-                        <p>{post.frontmatter.description}</p>
-                        <p>{post.frontmatter.date}</p>
-                        <a href={`/${post.frontmatter.slug}`}>Read more</a>
-                    </div>
+                    <Card className="p-5">
+                        <CardTitle>{post.frontmatter.title}</CardTitle>
+                        <CardDescription>
+                            <span>Written by <strong>{post.frontmatter.author}</strong> on {new Date(post.frontmatter.date).toLocaleDateString()}</span>
+                        </CardDescription>
+                        <CardContent className="mt-2 p-0">{post.frontmatter.description}</CardContent>
+                        <CardFooter className="mt-2 p-0">
+                            <a href={`/${post.frontmatter.slug}`}><Button>Read more</Button></a>
+                        </CardFooter>
+                    </Card>
                 ))
             }
             </div>

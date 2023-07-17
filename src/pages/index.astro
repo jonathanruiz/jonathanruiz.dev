@@ -1,0 +1,62 @@
+---
+import ProjectCard from "@/components/ProjectCard.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+import { siteConfig } from "../../config/site"
+import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+const posts = await Astro.glob("../posts/*.md").then((data) => data.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)));
+const recentPost = posts[0];
+---
+
+<MainLayout title={siteConfig.name} description={siteConfig.description} >
+	<section class="container items-center">
+		<div class="flex flex-col gap-2">
+			<div class="container pb-8 pt-6">
+				<section id="hero" class="max-w-[500px] md:max-w-[720px] pb-4">
+					<h1 class="font-extrabold leading-tight tracking-tighter text-5xl lg:text-6xl">
+					Hi, I'm <span class="bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent">Jonathan Ruiz</span>, <br>a software developer.
+					</h1>
+					<p>Developing applications using React.js and TypeScript, as well as utilizing Go for backend development, while also deploying infrastructure through the utilization of Azure, Terraform, Ansible, and Docker.</p>
+				</section>
+				<div class="md:flex">
+					<section class="flex items-center justify-center animate-bounce-slow md:basis-1/2">
+						<img src="/imgs/coding-left.png" alt="Code editor left" class="w-2/3"/>
+					</section>
+					<section id="about" class="mb-4 md:basis-1/2">
+						<div class="mx-4 flex items-center justify-center">
+							<img src="/imgs/profile.jpeg" alt="Jonathan Ruiz" class="rounded-full w-48" />
+						</div>
+						<div>
+							<h2 class="font-extrabold leading-tight tracking-tightergr text-4xl bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent mb-4">About Me</h2>
+							<div class='mt-4'>
+								<p class="mb-2">I'm a Utah based software engineer doing all things full-stack development. I've had a passion for technology from a very young age and have worked in different parts of the industry, going anywhere from networking to cloud to DevOps. The one consistant thing that I've always been motivated to do is software development. I love the challenge of solving problems and building things that can make people's lives easier.
+								</p>
+								<p class="mb-2">I'm a Miami native from Nicaraguan and Honduran descent. I love to try new foods and travel to new places. I'm like to hike and chase any trail that ends with a waterfall. Currently struggling to learn how to play the piano and speak Italian. I genuinely enjoy expanding my knowledge and it suits me well since the tech industry is constantly evolving, presenting endless learning opportunities.
+								</p>
+							</div>
+						</div>
+					</section>
+				</div>
+				<section id="projects" class="mb-4">
+						<h2 class="font-extrabold leading-tight tracking-tighter text-4xl bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent mb-4">Projects</h2>
+						<ProjectCard />
+				</section>
+				<section id="blog" class="mb-4">
+					<h2 class="font-extrabold leading-tight tracking-tighter text-4xl bg-gradient-to-r from-cyan-500 to-indigo-400 bg-clip-text text-transparent mb-4">Blog</h2>
+					<p class="mb-2">Check out my most recent blog post!</p>
+					<Card className="p-5 max-w-[800px]">
+						<CardTitle>{recentPost.frontmatter.title}</CardTitle>
+						<CardDescription>
+							<span>Written by <strong>{recentPost.frontmatter.author}</strong> on {new Date(recentPost.frontmatter.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+						</CardDescription>
+						<CardContent className="mt-2 p-0">{recentPost.frontmatter.description}</CardContent>
+						<CardFooter className="mt-2 p-0">
+							<a href={`/${recentPost.frontmatter.slug}`}><Button>Read more</Button></a>
+						</CardFooter>
+						</Card>
+				</section>
+			</div>
+		</div>
+	</section>
+</MainLayout>

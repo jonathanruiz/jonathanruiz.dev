@@ -1,60 +1,39 @@
 {
-  "name": "jonathanruiz.dev",
-  "private": true,
-  "description": "My portfolio webiste build with Gatsby",
-  "version": "0.1.0",
-  "author": "Jonathan Ruiz <jonadavruiz@gmail.com>",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-brands-svg-icons": "^5.8.1",
-    "@fortawesome/free-solid-svg-icons": "^5.8.1",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "babel-plugin-styled-components": "^1.10.0",
-    "devicon": "^2.2.0",
-    "gatsby": "^2.3.25",
-    "gatsby-background-image": "^0.3.3",
-    "gatsby-image": "^2.0.37",
-    "gatsby-plugin-manifest": "^2.0.28",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-sharp": "^2.0.32",
-    "gatsby-plugin-styled-components": "^3.0.7",
-    "gatsby-plugin-typography": "^2.2.13",
-    "gatsby-source-filesystem": "^2.0.29",
-    "gatsby-transformer-sharp": "^2.1.17",
-    "node-sass": "^4.11.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "react-typed": "^1.1.2",
-    "react-typography": "^0.16.19",
-    "smooth-scroll": "^16.0.3",
-    "styled-components": "^4.2.0",
-    "typography": "^0.16.19"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "prettier": "^1.16.4"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+    "name": "jonathanruiz.dev",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/react": "^2.2.1",
+        "@astrojs/tailwind": "^4.0.0",
+        "@radix-ui/react-scroll-area": "^1.0.4",
+        "@radix-ui/react-slot": "^1.0.2",
+        "@types/react": "^18.0.21",
+        "@types/react-dom": "^18.0.6",
+        "astro": "^2.7.4",
+        "class-variance-authority": "^0.6.1",
+        "clsx": "^1.2.1",
+        "lucide-react": "^0.258.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "tailwind-merge": "^1.13.2",
+        "tailwindcss": "^3.0.24",
+        "tailwindcss-animate": "^1.0.6"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.9",
+        "@typescript-eslint/parser": "^5.61.0",
+        "eslint": "^8.44.0",
+        "eslint-plugin-astro": "^0.27.2",
+        "eslint-plugin-jsx-a11y": "^6.7.1",
+        "prettier": "^3.0.0",
+        "prettier-config-standard": "^5.0.0",
+        "prettier-plugin-astro": "^0.11.0"
+    }
 }

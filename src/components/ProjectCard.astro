@@ -1,0 +1,46 @@
+---
+import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "config/site";
+import { buttonVariants } from "./ui/button";
+import { Icons } from "./icons";
+---
+
+<div class="flex space-x-5 items-stretch overflow-x-auto">
+    {siteConfig.projects.map(project => {
+        return (
+            <Card>
+                <CardContent>
+                    <CardTitle className="flex mt-4">
+                        {project.title}
+                        <div>
+                            <a
+                                href={project.githubRepo}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <div
+                                    class={buttonVariants({
+                                        size: "sm",
+                                        variant: "ghost",
+                                    })}
+                                >
+                                    <Icons.gitHub className="h-5 w-5" />
+                                    <span class="sr-only">GitHub</span>
+                                </div>
+                            </a>
+                        </div>
+                        </CardTitle>
+                    <CardDescription>{project.description}</CardDescription>
+                </CardContent>
+                <CardFooter className="w-[350px]">
+                        {project.tags.map(tag => {
+                            return (
+                                <Badge className="mr-2">{tag}</Badge>
+                            )
+                        })}
+                </CardFooter>
+            </Card>
+        )
+    })}
+</div>

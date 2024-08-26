@@ -31,6 +31,18 @@ export const siteConfig = {
             tags: ["Astro", "React", "TypeScript", "TailwindCSS"]
         },
         {
+            title: "wakey",
+            description: "A TUI built for managing and waking your devices using Wake-on-LAN. ",
+            gitHubRepo: "https://github.com/jonathanruiz/wakey",
+            tags: ["GoLang", "CLI", "TUI"]
+        },
+        {
+            title: "grubrun",
+            description: "A webapp to help with organizing your food runs.",
+            githubRepo: "https://github.com/jonathanruiz/grubrun",
+            tags: ["React", "TypeScript", "TailwindCSS", "GoLang", "WebSockets"]
+        },
+        {
             title: "Hacker News Next.js",
             description: "A Hacker News clone built with Next.js.",
             link: "",

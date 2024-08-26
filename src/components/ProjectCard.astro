@@ -6,12 +6,12 @@ import { buttonVariants } from "./ui/button";
 import { Icons } from "./icons";
 ---
 
-<div class="flex space-x-5 items-stretch overflow-x-auto">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
     {siteConfig.projects.map(project => {
         return (
-            <Card>
+            <Card className="w-full col-span-1 max-w-[700px] lg:col-span-auto">
                 <CardContent>
-                    <CardTitle className="flex mt-4">
+                    <CardTitle className="flex mt-4 justify-between items-center">
                         {project.title}
                         <div>
                             <a
@@ -30,13 +30,13 @@ import { Icons } from "./icons";
                                 </div>
                             </a>
                         </div>
-                        </CardTitle>
+                    </CardTitle>
                     <CardDescription>{project.description}</CardDescription>
                 </CardContent>
-                <CardFooter className="w-[350px]">
+                <CardFooter className="flex flex-wrap">
                         {project.tags.map(tag => {
                             return (
-                                <Badge className="mr-2">{tag}</Badge>
+                                <Badge className="mr-2 mb-2">{tag}</Badge>
                             )
                         })}
                 </CardFooter>

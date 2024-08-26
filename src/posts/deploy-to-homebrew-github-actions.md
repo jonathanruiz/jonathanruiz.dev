@@ -91,7 +91,7 @@ brew tap <username>/<tapname>
 
 So if I was to add my own tap, I would run the following command:
 
-```
+```bash
 brew tap jonathanruiz/homebrew-tap
 ```
 

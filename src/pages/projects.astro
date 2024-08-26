@@ -8,13 +8,13 @@ import { siteConfig } from "../../config/site"
 ---
 
 <MainLayout title="Projects" description="This is the projects page for Jonathan Ruiz.">
-	<section class="container items-center">
-		<div class="flex flex-col gap-2">
-			<div class="container pb-8 pt-6">
+    <section class="container items-center">
+        <div class="flex flex-col gap-2">
+            <div class="container pb-8 pt-6">
                 {siteConfig.projects.map(project => (
-                        <Card className="my-5 p-5 max-w-[700px]">
+                        <Card className="my-5 p-5 w-full max-w-[700px]">
                             <CardContent>
-                                <CardTitle className="flex mt-4">
+                                <CardTitle className="flex mt-4 justify-between items-center">
                                     {project.title}
                                     <div>
                                         <a
@@ -36,10 +36,10 @@ import { siteConfig } from "../../config/site"
                                 </CardTitle>
                                 <CardDescription>{project.description}</CardDescription>
                             </CardContent>
-                            <CardFooter >
+                            <CardFooter className="flex flex-wrap">
                                     {project.tags.map(tag => {
                                         return (
-                                            <Badge className="mr-2">{tag}</Badge>
+                                            <Badge className="mr-2 mb-2">{tag}</Badge>
                                         )
                                     })}
                             </CardFooter>
@@ -48,5 +48,5 @@ import { siteConfig } from "../../config/site"
                 )}
             </div>
         </div>
-  </section>
+    </section>
 </MainLayout>

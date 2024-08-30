@@ -19,10 +19,10 @@ const { Content, frontmatter } = Astro.props.post
 ---
 
 <MainLayout title={frontmatter.title} description={frontmatter.description}>
-    <section class="container items-center">
+    <section class="container items-center px-0">
 		<div class="flex flex-col gap-2">
-			<div class="container pb-8 pt-6">
-                <Card className="p-5">
+			<div class="container pb-8 pt-6 px-2">
+                <Card className="p-3">
                     <CardTitle>{frontmatter.title}</CardTitle>
                     <CardDescription><span>Written by <strong>{frontmatter.author}</strong> on {new Date(frontmatter.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span></CardDescription>
                     <CardContent className="p-0 mt-2">

@@ -1,16 +1,23 @@
 ---
-import ThemeIcon from "@/components/ThemeIcon.astro";
-import { Icons } from "@/components/icons";
-import { buttonVariants } from "./ui/button";
+import ThemeIcon from "@/components/ThemeIcon.astro"
+import { Icons } from "@/components/icons"
+import { buttonVariants } from "./ui/button"
 import { siteConfig } from "../../config/site"
 ---
 
 <header class="sticky top-0 z-40 w-full bg-background">
-    <div class="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+    <div
+        class="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0"
+    >
         <div class="flex gap-6 md:gap-10">
             <a href="/" class="flex items-center space-x-2">
                 <span>
-                    <img src="/favicon.svg" alt="Jonathan Ruiz logo" width="32" height="32">
+                    <img
+                        src="/favicon.svg"
+                        alt="Jonathan Ruiz logo"
+                        width="32"
+                        height="32"
+                    />
                 </span>
                 <span class="inline-block font-bold">
                     {siteConfig.name}
@@ -18,20 +25,17 @@ import { siteConfig } from "../../config/site"
             </a>
         </div>
         <div class="flex flex-1 items-center justify-end space-x-4">
-            {siteConfig.mainNav?.length ? (
-                <nav class="flex gap-6">
-                    {siteConfig.mainNav?.map(
+            <button id="menuToggle" class="block md:hidden">
+                <Icons.menu className="h-6 w-6" />
+            </button>
+            <nav class="hidden md:flex gap-6">
+                {
+                    siteConfig.mainNav?.map(
                         (item) =>
-                            item.href && (
-                                <a
-                                    href={item.href}
-                                >
-                                    {item.title}
-                                </a>
-                        )
-                    )}
-                </nav>
-            ) : null}
+                            item.href && <a href={item.href}>{item.title}</a>
+                    )
+                }
+            </nav>
             <nav class="flex items-center space-x-1">
                 <a
                     href={siteConfig.links.github}
@@ -41,7 +45,7 @@ import { siteConfig } from "../../config/site"
                     <div
                         class={buttonVariants({
                             size: "sm",
-                            variant: "ghost",
+                            variant: "ghost"
                         })}
                     >
                         <Icons.gitHub className="h-5 w-5" />
@@ -52,4 +56,38 @@ import { siteConfig } from "../../config/site"
             </nav>
         </div>
     </div>
+    <div
+        id="sidebar"
+        class="fixed top-0 right-0 h-full w-64 bg-background transform translate-x-full transition-transform md:hidden"
+    >
+        <div class="flex flex-col p-4">
+            <button id="closeSidebar" class="self-end">
+                <Icons.x className="h-6 w-6" />
+            </button>
+            {
+                siteConfig.mainNav?.map(
+                    (item) =>
+                        item.href && (
+                            <a href={item.href} class="py-2">
+                                {item.title}
+                            </a>
+                        )
+                )
+            }
+        </div>
+    </div>
 </header>
+
+<script is:inline>
+    const menuToggle = document.getElementById("menuToggle")
+    const sidebar = document.getElementById("sidebar")
+    const closeSidebar = document.getElementById("closeSidebar")
+
+    menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("translate-x-full")
+    })
+
+    closeSidebar.addEventListener("click", () => {
+        sidebar.classList.add("translate-x-full")
+    })
+</script>

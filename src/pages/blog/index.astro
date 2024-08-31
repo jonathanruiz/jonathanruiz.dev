@@ -18,9 +18,9 @@ const posts = await Astro.glob("../../posts/*.md").then((data) =>
 ---
 
 <MainLayout title="Blog" description="This is the blog page for Jonathan Ruiz.">
-    <section class="container items-center">
+    <section class="container items-center px-0">
         <div class="flex flex-col gap-2">
-            <div class="container pb-8 pt-6">
+            <div class="container pb-8 pt-6 px-2">
                 {
                     posts.map((post) => (
                         <Card className="my-5 p-10 max-w-[800px]">

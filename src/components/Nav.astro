@@ -29,7 +29,14 @@ import { siteConfig } from "../../config/site"
                 {
                     siteConfig.mainNav?.map(
                         (item) =>
-                            item.href && <a href={item.href}>{item.title}</a>
+                            item.href && (
+                                <a
+                                    href={item.href}
+                                    class="text-lg md:text-base"
+                                >
+                                    {item.title}
+                                </a>
+                            )
                     )
                 }
             </nav>
@@ -68,7 +75,7 @@ import { siteConfig } from "../../config/site"
                 siteConfig.mainNav?.map(
                     (item) =>
                         item.href && (
-                            <a href={item.href} class="py-2">
+                            <a href={item.href} class="py-2 px-5 text-2xl">
                                 {item.title}
                             </a>
                         )

@@ -32,8 +32,9 @@ export const siteConfig = {
         },
         {
             title: "wakey",
-            description: "A TUI built for managing and waking your devices using Wake-on-LAN. ",
-            gitHubRepo: "https://github.com/jonathanruiz/wakey",
+            description:
+                "A TUI built for managing and waking your devices using Wake-on-LAN. ",
+            githubRepo: "https://github.com/jonathanruiz/wakey",
             tags: ["GoLang", "CLI", "TUI"]
         },
         {

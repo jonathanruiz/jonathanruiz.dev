@@ -25,9 +25,6 @@ import { siteConfig } from "../../config/site"
             </a>
         </div>
         <div class="flex flex-1 items-center justify-end space-x-4">
-            <button id="menuToggle" class="block md:hidden">
-                <Icons.menu className="h-6 w-6" />
-            </button>
             <nav class="hidden md:flex gap-6">
                 {
                     siteConfig.mainNav?.map(
@@ -53,6 +50,9 @@ import { siteConfig } from "../../config/site"
                     </div>
                 </a>
                 <ThemeIcon />
+                <button id="menuToggle" class="block md:hidden">
+                    <Icons.menu className="h-6 w-6" />
+                </button>
             </nav>
         </div>
     </div>

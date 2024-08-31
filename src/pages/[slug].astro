@@ -1,0 +1,37 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "@/components/ui/card";
+
+export async function getStaticPaths() {
+    const posts = await Astro.glob("../posts/*.md");
+
+    return posts.map(post => ({
+        params: {
+            slug: post.frontmatter.slug
+        },
+        props: {
+            post
+        }
+    }))
+}
+
+const { Content, frontmatter } = Astro.props.post
+---
+
+<MainLayout title={frontmatter.title} description={frontmatter.description}>
+    <section class="container items-center px-0">
+		<div class="flex flex-col gap-2">
+			<div class="container pb-8 pt-6 px-2">
+                <Card className="p-3">
+                    <CardTitle>{frontmatter.title}</CardTitle>
+                    <CardDescription><span>Written by <strong>{frontmatter.author}</strong> on {new Date(frontmatter.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span></CardDescription>
+                    <CardContent className="p-0 mt-2">
+                        <article class="prose max-w-none dark:prose-invert">
+                          <Content />
+                        </article>
+                    </CardContent>
+                </Card>
+            </div>
+        </div>
+    </section>
+</MainLayout>

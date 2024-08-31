@@ -1,17 +1,27 @@
 ---
-import MainLayout from "@/layouts/MainLayout.astro";
-import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Icons } from "@/components/icons";
-import { buttonVariants } from "@/components/ui/button";
+import MainLayout from "@/layouts/MainLayout.astro"
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardTitle
+} from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Icons } from "@/components/icons"
+import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "../../config/site"
 ---
 
-<MainLayout title="Projects" description="This is the projects page for Jonathan Ruiz.">
-    <section class="container items-center">
+<MainLayout
+    title="Projects"
+    description="This is the projects page for Jonathan Ruiz."
+>
+    <section class="container items-center px-0">
         <div class="flex flex-col gap-2">
-            <div class="container pb-8 pt-6">
-                {siteConfig.projects.map(project => (
+            <div class="container pb-8 pt-6 px-2">
+                {
+                    siteConfig.projects.map((project) => (
                         <Card className="my-5 p-5 w-full max-w-[700px]">
                             <CardContent>
                                 <CardTitle className="flex mt-4 justify-between items-center">
@@ -25,27 +35,33 @@ import { siteConfig } from "../../config/site"
                                             <div
                                                 class={buttonVariants({
                                                     size: "sm",
-                                                    variant: "ghost",
+                                                    variant: "ghost"
                                                 })}
                                             >
                                                 <Icons.gitHub className="h-5 w-5" />
-                                                <span class="sr-only">GitHub</span>
+                                                <span class="sr-only">
+                                                    GitHub
+                                                </span>
                                             </div>
                                         </a>
                                     </div>
                                 </CardTitle>
-                                <CardDescription>{project.description}</CardDescription>
+                                <CardDescription>
+                                    {project.description}
+                                </CardDescription>
                             </CardContent>
                             <CardFooter className="flex flex-wrap">
-                                    {project.tags.map(tag => {
-                                        return (
-                                            <Badge className="mr-2 mb-2">{tag}</Badge>
-                                        )
-                                    })}
+                                {project.tags.map((tag) => {
+                                    return (
+                                        <Badge className="mr-2 mb-2">
+                                            {tag}
+                                        </Badge>
+                                    )
+                                })}
                             </CardFooter>
                         </Card>
-                    )
-                )}
+                    ))
+                }
             </div>
         </div>
     </section>
